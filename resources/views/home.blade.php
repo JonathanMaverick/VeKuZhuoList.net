@@ -1,6 +1,6 @@
 @extends('template.navbar')
 
-@section('title', 'VeKunimeList.net')
+@section('title', 'VeKuZhuoList.net')
 
 @section('content')
 

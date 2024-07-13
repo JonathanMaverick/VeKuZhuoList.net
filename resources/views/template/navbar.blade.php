@@ -15,7 +15,7 @@
         {{-- Navigation Bar --}}
         <div class="nav-bar bg-black">
             <div class="nav-bar-upper flex justify-between py-3">
-                <img class="w-2/12 h-auto" src="{{ asset('/image/VekunimeList.png') }}" alt="">
+                <img class="w-2/12 h-auto" src="{{ asset('/image/VeKuZhuoList.png') }}" alt="">
                 <div class="login-register-button flex justify-between center w-3/12 gap-2">
                     <a class="w-1/2 flex justify-center bg-gray-500 font-bold text-white">Login</a>
                     <a class="w-1/2 flex justify-center bg-blue-600 font-bold text-white">Sign Up</a>
