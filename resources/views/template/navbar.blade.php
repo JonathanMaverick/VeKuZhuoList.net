@@ -7,23 +7,43 @@
     <title>@yield('title')</title>
     <link rel="icon" href="{{ asset('/image/logo.png') }}" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body class="bg-black flex justify-center">
-    <div class="main w-4/6 bg-yellow-200 flex flex-col">
-        <div class="nav-bar">
-            <div class="nav-bar-upper flex justify-between">
-                <img class="w-1/5" src="{{ asset('/image/VekunimeList.png') }}" alt="">
-                <div class="login-register-button flex justify-between center w-1/6">
-                    <button class="w-2/6 bg-yellow-300">Login</button>
-                    <button class="w-2/6 bg-red-300">Register</button>
+    <div class="main flex flex-col">
+
+        {{-- Navigation Bar --}}
+        <div class="nav-bar bg-black">
+            <div class="nav-bar-upper flex justify-between py-3">
+                <img class="w-2/12 h-auto" src="{{ asset('/image/VekunimeList.png') }}" alt="">
+                <div class="login-register-button flex justify-between center w-3/12 gap-2">
+                    <a class="w-1/2 flex justify-center bg-gray-500 font-bold text-white">Login</a>
+                    <a class="w-1/2 flex justify-center bg-blue-600 font-bold text-white">Sign Up</a>
+                </div>
+            </div>
+            <div class="nav-bar-bottom bg-blue-700 w-full flex flex-row justify-between">
+                <div class="dropdown-section flex flex-row text-white font-bold">
+                    <div class="p-2 hover:bg-neutral-800 flex items-center">
+                        Anime
+                    </div>
+                    <div class="p-2 hover:bg-neutral-800 flex items-center">
+                        Manga
+                    </div>
+                </div>
+                <div class="search-section flex items-center w-4/12 bg-black mr-2 my-2">
+                    <input type="text" class="bg-transparent border-1 outline-none focus:ring-0 text-white w-full px-4" placeholder="Search...">
+                    <button class="bg-gray-600 p-2">
+                        <img src="{{ asset('/image/search.svg') }}" class="w-4 h-4" alt="Search">
+                    </button>
                 </div>
             </div>
         </div>
-        <div class="main w-4/6 bg-yellow-200">
-            <div class="content">
-                @yield('content')
-            </div>
+
+        {{-- Content --}}
+        <div class="content my-4">
+            @yield('content')
         </div>
+
     </div>
 </body>
 </html>
