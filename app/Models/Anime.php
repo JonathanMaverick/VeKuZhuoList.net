@@ -15,12 +15,8 @@ class Anime extends Model
         'synopsis',
         'trailer_url',
         'image_url',
+        'total_episodes',
     ];
-
-    public function episodes()
-    {
-        return $this->hasMany(Episode::class);
-    }
 
     public function genres()
     {

@@ -22,6 +22,7 @@ return new class extends Migration
             $table->text('synopsis');
             $table->string('trailer_url');
             $table->string('image_url');
+            $table->integer('total_episodes');
             $table->bigInteger('studio_id')->unsigned();
             $table->bigInteger('season_id')->unsigned();
             $table->foreign('studio_id')->references('id')->on('studios');

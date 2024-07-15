@@ -25,6 +25,7 @@ class AnimeSeeder extends Seeder
             'mal_score' => 8.3,
             'synopsis' => 'Naruto Uzumaki, a mischievous adolescent ninja, struggles as he searches for recognition and dreams of becoming the Hokage, the village\'s leader and strongest ninja.',
             'trailer_url' => 'https://www.youtube.com/watch?v=QczGoCmX-pI',
+            'total_episodes' => 500,
             'image_url' => 'anime_images/naruto.png',
             'studio_id' => 15,
             'season_id' => 1,
