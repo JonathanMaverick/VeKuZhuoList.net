@@ -14,7 +14,27 @@ class Anime extends Model
         'mal_score',
         'synopsis',
         'trailer_url',
+        'image_url',
     ];
+
+    public function episodes()
+    {
+        return $this->hasMany(Episode::class);
+    }
+
+    public function genres()
+    {
+        return $this->belongsToMany(Genre::class, 'anime_genres');
+    }
+
+    public function studio(){
+        return $this->belongsTo(Studio::class);
+    }
+
+    public function season(){
+        return $this->belongsTo(Season::class);
+    }
+
     use HasFactory;
 }
 

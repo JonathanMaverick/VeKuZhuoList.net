@@ -21,6 +21,11 @@ return new class extends Migration
             $table->double('mal_score');
             $table->text('synopsis');
             $table->string('trailer_url');
+            $table->string('image_url');
+            $table->bigInteger('studio_id')->unsigned();
+            $table->bigInteger('season_id')->unsigned();
+            $table->foreign('studio_id')->references('id')->on('studios');
+            $table->foreign('season_id')->references('id')->on('seasons');
             $table->timestamps();
         });
     }

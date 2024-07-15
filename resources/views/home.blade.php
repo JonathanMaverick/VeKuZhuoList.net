@@ -10,6 +10,7 @@
             <div class="anime-list">
                 @foreach($animes as $anime)
                     <div class="anime-item bg-gray-800 m-2 p-2">
+                        <img src="{{Storage::url($anime->image_url)}}" alt="{{ $anime->anime_name }}" class="w-32 h-32 mr-4">
                         <h2 class="text-xl text-white font-bold">{{ $anime->anime_name }}</h2>
                         <p class="text-gray-300">Release Date: {{ $anime->release_date }}</p>
                         <p class="text-gray-300">Views: {{ $anime->views }}</p>
