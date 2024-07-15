@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('studio_name');
             $table->string('studio_logo');
-            $table->text('studio_description');
+            $table->text('studio_description')->nullable();
             $table->timestamps();
         });
     }

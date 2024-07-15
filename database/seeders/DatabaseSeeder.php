@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         $this->call(GenreSeeder::class);
-        $this->call(AnimeSeeder::class);
+        $this->call(StudioSeeder::class);
+        // $this->call(AnimeSeeder::class);
     }
 }
