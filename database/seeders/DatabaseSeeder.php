@@ -20,8 +20,11 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        $this->call(SeasonSeeder::class);
         $this->call(GenreSeeder::class);
         $this->call(StudioSeeder::class);
-        // $this->call(AnimeSeeder::class);
+        $this->call(AnimeSeeder::class);
+        $this->call(VoiceActorSeeder::class);
+        $this->call(CharacterSeeder::class);
     }
 }
