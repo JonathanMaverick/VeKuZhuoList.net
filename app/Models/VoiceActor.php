@@ -15,6 +15,6 @@ class VoiceActor extends Model
     ];
 
     public function characters(){
-        return $this->belongsToMany(Character::class, 'character_voice_actors');
+        return $this->hasMany(Character::class);
     }
 }

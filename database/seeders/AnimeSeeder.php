@@ -18,17 +18,21 @@ class AnimeSeeder extends Seeder
     {
         // $faker = Factory::create();
 
-        Anime::create([
-            'anime_name' => 'Naruto',
-            'release_date' => '2002-10-03',
-            'views' => 1000000,
-            'mal_score' => 8.3,
-            'synopsis' => 'Naruto Uzumaki, a mischievous adolescent ninja, struggles as he searches for recognition and dreams of becoming the Hokage, the village\'s leader and strongest ninja.',
-            'trailer_url' => 'https://www.youtube.com/watch?v=QczGoCmX-pI',
-            'total_episodes' => 500,
-            'image_url' => 'anime_images/naruto.png',
-            'studio_id' => 15,
-            'season_id' => 1,
-        ]);
+        $anime = [
+            [
+                'anime_name' => 'Naruto',
+                'release_date' => '2002-10-03',
+                'views' => 1000000,
+                'mal_score' => 8.27,
+                'synopsis' => 'Naruto Uzumaki, a mischievous adolescent ninja, struggles as he searches for recognition and dreams of becoming the Hokage, the village\'s leader and strongest ninja.',
+                'trailer_url' => 'https://www.youtube.com/watch?v=QczGoCmX-pI',
+                'total_episodes' => 500,
+                'image_url' => 'anime_images/naruto.png',
+                'studio_id' => 15,
+                'season_id' => 1
+            ],
+        ];
+
+        Anime::insert($anime);
     }
 }

@@ -12,4 +12,10 @@ class AnimeController extends Controller
         $animes = Anime::all();
         return view('home', compact('animes'));
     }
+
+    public function show($id)
+    {
+        $anime = Anime::find($id);
+        return view('anime.show', compact('anime'));
+    }
 }

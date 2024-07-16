@@ -31,6 +31,10 @@ class Anime extends Model
         return $this->belongsTo(Season::class);
     }
 
+    public function characters(){
+        return $this->hasMany(Character::class);
+    }
+
     use HasFactory;
 }
 

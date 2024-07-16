@@ -17,9 +17,8 @@ class Character extends Model
         return $this->belongsTo(Anime::class, 'anime_characters');
     }
 
-    public function voiceActors()
-    {
-        return $this->belongsTo(VoiceActor::class, 'character_voice_actors');
+    public function voiceActor(){
+        return $this->belongsTo(VoiceActor::class);
     }
 
     use HasFactory;

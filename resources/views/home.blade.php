@@ -9,6 +9,7 @@
             <h1 class="text-2xl text-white font-bold">Spring 2024 Anime</h1>
             <div class="anime-list">
                 @foreach($animes as $anime)
+                <a href="{{ route('anime.show', $anime->id) }}">
                     <div class="anime-item bg-gray-800 m-2 p-2">
                         <img src="{{Storage::url($anime->image_url)}}" alt="{{ $anime->anime_name }}" class="w-32 h-32 mr-4">
                         <h2 class="text-xl text-white font-bold">{{ $anime->anime_name }}</h2>
@@ -18,6 +19,7 @@
                         <p class="text-gray-300">{{ $anime->synopsis }}</p>
                         <a href="{{ $anime->trailer_url }}" class="text-blue-500" target="_blank">Watch Trailer</a>
                     </div>
+                </a>
                 @endforeach
             </div>
         </div>

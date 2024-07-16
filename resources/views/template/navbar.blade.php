@@ -15,7 +15,9 @@
         {{-- Navigation Bar --}}
         <div class="nav-bar bg-black">
             <div class="nav-bar-upper flex justify-between py-3">
-                <img class="w-2/12 h-auto" src="{{ asset('/image/VeKuZhuoList.png') }}" alt="">
+                <a href="{{route('home')}}" class="w-2/12 h-auto">
+                    <img src="{{ asset('/image/VeKuZhuoList.png') }}" alt="">
+                </a>
                 <div class="login-register-button flex justify-between center w-3/12 gap-2">
                     <a class="w-1/2 flex justify-center bg-gray-500 font-bold text-white">Login</a>
                     <a class="w-1/2 flex justify-center bg-blue-600 font-bold text-white">Sign Up</a>
@@ -25,9 +27,6 @@
                 <div class="dropdown-section flex flex-row text-white font-bold">
                     <div class="p-2 hover:bg-neutral-800 flex items-center">
                         Anime
-                    </div>
-                    <div class="p-2 hover:bg-neutral-800 flex items-center">
-                        Manga
                     </div>
                 </div>
                 <div class="search-section flex items-center w-4/12 bg-black mr-2 my-2">
