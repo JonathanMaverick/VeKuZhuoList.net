@@ -26,3 +26,6 @@ Route::get('/voice_actor/{id}', [VoiceActorController::class, 'show'])->name('vo
 Route::get('/genre/{id}', [GenreController::class, 'show'])->name('genre.show');
 
 Route::get('/search', [SearchController::class, 'search'])->name('search');
+
+Route::get('/top_anime_malscore', [AnimeController::class, 'top_anime_malscore'])->name('top_anime_malscore');
+Route::get('/top_anime_views', [AnimeController::class, 'top_anime_views'])->name('top_anime_views');
