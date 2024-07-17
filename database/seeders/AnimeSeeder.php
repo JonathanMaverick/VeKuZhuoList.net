@@ -343,7 +343,7 @@ As Gojou and Kitagawa work together on one cosplay outfit after another, they ca
                 'studio_id' => 10,
                 'season_id' => 61
             ],
-            // lanjut 23
+            // lanjut anime ke 23
         ];
 
         Anime::insert($anime);
