@@ -16,80 +16,53 @@ class GenreSeeder extends Seeder
     public function run()
     {
         //
-        Genre::create([
-            'genre_name' => 'Action',
-        ]);
 
-        Genre::create([
-            'genre_name' => 'Adventure',
-        ]);
+        $genres = [
+            [
+                'genre_name' => 'Action',
+            ],
+            [
+                'genre_name' => 'Adventure',
+            ],
+            [
+                'genre_name' => 'Comedy',
+            ],
+            [
+                'genre_name' => 'Drama',
+            ],
+            [
+                'genre_name' => 'Fantasy',
+            ],
+            [
+                'genre_name' => 'Magic',
+            ],
+            [
+                'genre_name' => 'Mystery',
+            ],
+            [
+                'genre_name' => 'Psychological',
+            ],
+            [
+                'genre_name' => 'Romance',
+            ],
+            [
+                'genre_name' => 'Sci-Fi',
+            ],
+            [
+                'genre_name' => 'Slice of Life',
+            ],
+            [
+                'genre_name' => 'Sports',
+            ],
+            [
+                'genre_name' => 'Supernatural',
+            ],
+            [
+                'genre_name' => 'Horror',
+            ]
+        ];
 
-        Genre::create([
-            'genre_name' => 'Comedy',
-        ]);
+        Genre::insert($genres);
 
-        Genre::create([
-            'genre_name' => 'Drama',
-        ]);
-
-        Genre::create([
-            'genre_name' => 'Fantasy',
-        ]);
-
-        Genre::create([
-            'genre_name' => 'Magic',
-        ]);
-
-        Genre::create([
-            'genre_name' => 'Mecha',
-        ]);
-
-        Genre::create([
-            'genre_name' => 'Music',
-        ]);
-
-        Genre::create([
-            'genre_name' => 'Mystery',
-        ]);
-
-        Genre::create([
-            'genre_name' => 'Psychological',
-        ]);
-
-        Genre::create([
-            'genre_name' => 'Romance',
-        ]);
-
-        Genre::create([
-            'genre_name' => 'Sci-Fi',
-        ]);
-
-        Genre::create([
-            'genre_name' => 'Slice of Life',
-        ]);
-
-        Genre::create([
-            'genre_name' => 'Sports',
-        ]);
-
-        Genre::create([
-            'genre_name' => 'Supernatural',
-        ]);
-
-        Genre::create([
-            'genre_name' => 'Horror',
-        ]);
-
-        Genre::create([
-            'genre_name' => 'Thriller',
-        ]);
-
-        Genre::create([
-            'genre_name' => 'Martial Arts',
-        ]);
-
-        Genre::create([
-            'genre_name' => 'Game',
-        ]);
     }
 }
