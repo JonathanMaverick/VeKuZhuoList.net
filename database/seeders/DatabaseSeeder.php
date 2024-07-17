@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call(GenreSeeder::class);
         $this->call(StudioSeeder::class);
         $this->call(AnimeSeeder::class);
+        $this->call(AnimeGenreSeeder::class);
         $this->call(VoiceActorSeeder::class);
         $this->call(CharacterSeeder::class);
     }

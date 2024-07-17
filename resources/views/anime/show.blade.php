@@ -27,6 +27,9 @@
                 </a>
             </p>
         @endforeach
+        @foreach ($anime->genres as $genre)
+            <a href="{{ route('genre.show', $genre->id) }}" class="text-blue-500">{{ $genre->genre_name }}</a>
+        @endforeach
     </div>
 </div>
 
