@@ -343,7 +343,61 @@ As Gojou and Kitagawa work together on one cosplay outfit after another, they ca
                 'studio_id' => 10,
                 'season_id' => 61
             ],
-            // lanjut anime ke 23
+            [
+                'anime_name' => '"Oshi no Ko" 2nd Season',
+                'release_date' => '2024-07-03',
+                'views' => 266549,
+                'mal_score' => 8.36,
+                'synopsis' => 'Aquas desire for revenge takes center stage as he navigates the dark underbelly of the entertainment world alongside his twin sister, Ruby. While Ruby follows in their slain mothers footsteps to become an idol, Aqua joins a famous theater troupe in hopes of uncovering clues to the identity of his father—the man who arranged their mothers untimely death, and the man who once starred in the same troupe Aqua hopes to infiltrate.',
+                'trailer_url' => 'QMuajQlx64c',
+                'total_episodes' => 13,
+                'image_url' => 'anime_images/oshi2.jpg',
+                'studio_id' => 10,
+                'season_id' => 71
+            ],
+            [
+                'anime_name' => 'Nige Jouzu no Wakagimi',
+                'release_date' => '2024-07-06',
+                'views' => 58484,
+                'mal_score' => 8.01,
+                'synopsis' => 'Eight-year-old Tokiyuki Houjou, the next successor of the Kamakura shogunate, is a young boy lacking talent in everything besides hide-and-seek. One day, his carefree life is abruptly turned upside down when Takauji Ashikaga brutally seizes power from the Kamakuras, ending their reign. Rescued by a self-proclaimed prophetic priest, Tokiyuki manages to escape with his life. Now he must evade those trying to kill him while recruiting comrades who can help him restore the Kamakura Shogunate to its former glory.
+
+                Set during the Nanboku-chou period of Japanese history, Nige Jouzu no Wakagimi is a tale of redemption, documenting the life of the forgotten hero that altered Japans destiny by running away.',
+                'trailer_url' => 'JjOLjAB0bcI',
+                'total_episodes' => 12,
+                'image_url' => 'anime_images/nige.jpg',
+                'studio_id' => 10,
+                'season_id' => 71
+            ],
+            [
+                'anime_name' => 'Horimiya: Piece',
+                'release_date' => '2023-07-01',
+                'views' => 331615,
+                'mal_score' => 8.18,
+                'synopsis' => 'As the graduation ceremony at Katagiri High School comes to an end, Kyouko Hori, her boyfriend Izumi Miyamura, and their friends begin to look back on their time as students. The moments they shared together may be fleeting, but each one is a colorful piece of their precious memories.',
+                'trailer_url' => 'MU-Vk5R0vVY',
+                'total_episodes' => 13,
+                'image_url' => 'anime_images/horimiyaPiece.jpg',
+                'studio_id' => 10,
+                'season_id' => 67
+            ],
+            [
+                'anime_name' => 'Cyberpunk: Edgerunners',
+                'release_date' => '2022-09-13',
+                'views' => 775801,
+                'mal_score' => 8.60,
+                'synopsis' => 'Dreams are doomed to die in Night City, a futuristic Californian metropolis. As a teenager living in the citys slums, David Martinez is trying to fulfill his mothers lifelong wish for him to reach the top of Arasaka, the worlds leading security corporation. To this end, he attends the prestigious Arasaka Academy while his mother works tirelessly to keep their family afloat.
+
+                When an incident with a street gang leaves Davids life in tatters, he stumbles upon Sandevistan cyberware—a prosthetic that grants its wearer superhuman speed. Fueled by rage, David implants the device in his back, using it to exact revenge on one of his tormentors. This gets him expelled from the academy, shattering his hopes of ever making his mother proud.
+                
+                After witnessing Davids newfound abilities, the beautiful data thief Lucyna "Lucy" Kushinada offers to team up with him, handing him a ticket to salvation. However, associating with Lucy introduces David to the world of Edgerunners—cyborg criminals who will break any law for money. Edgerunners often lose their lives, if the cyberware does not break their minds first; but in his fight for survival inside a corrupt system, David is ready to risk it all.',
+                'trailer_url' => 'MUJFsL_rE6E',
+                'total_episodes' => 10,
+                'image_url' => 'anime_images/cyber.jpg',
+                'studio_id' => 11,
+                'season_id' => 64
+            ],
+            //lanjut anime ke 28
         ];
 
         Anime::insert($anime);

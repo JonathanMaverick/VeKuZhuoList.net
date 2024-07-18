@@ -17,7 +17,7 @@
       <div class="main-content w-4/6">
         <h1 class="text-2xl text-white font-bold">Spring 2024 Anime</h1>
         <div class="anime-list">
-          @foreach ($animes as $anime)
+          @foreach ($currentSeasonAnime as $anime)
             <a href="{{ route('anime.show', $anime->id) }}">
               <div class="anime-item bg-gray-800 m-2 p-2">
                 <img src="{{ Storage::url($anime->image_url) }}" alt="{{ $anime->anime_name }}" class="w-32 h-32 mr-4">
