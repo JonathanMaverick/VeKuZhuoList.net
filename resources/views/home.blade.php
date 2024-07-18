@@ -5,7 +5,13 @@
 @section('content')
 
   <div class="flex flex-col">
-    <img src="{{ asset('/image/banner.png') }}" alt="" class="h-[450px] object-cover">
+    <div class="banner-container h-[450px] relative">
+      <img src="{{ asset('/image/banner.png') }}" alt="" class="object-cover h-full w-full">
+      <div class="absolute inset-0 flex justify-center flex-col items-start pl-[40px] mb-[30px] text-white">
+        <p class="text-[30px] font-bold">Unleash Your Inner Otaku: Top Anime Picks</p>
+        <p>Explore captivating stories, unforgettable characters, and epic adventures</p>
+      </div>
+    </div>
 
     <div class="flex flex-row">
       <div class="main-content w-4/6">
