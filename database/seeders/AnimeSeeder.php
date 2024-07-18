@@ -408,7 +408,7 @@ As Gojou and Kitagawa work together on one cosplay outfit after another, they ca
         'trailer_url' => '2oui7JLlBpk',
         'total_episodes' => 73,
         'image_url' => 'anime_images/worldTrigger.jpg',
-        'studio_id' => 11,
+        'studio_id' => 12,
         'season_id' => 32
       ],
       [
@@ -422,10 +422,42 @@ As Gojou and Kitagawa work together on one cosplay outfit after another, they ca
         'trailer_url' => 'AGjx0N24U',
         'total_episodes' => 25,
         'image_url' => 'anime_images/codeGeass.jpg',
-        'studio_id' => 12,
+        'studio_id' => 13,
         'season_id' => 4
       ],
-      //lanjut anime ke 29
+      [
+        'anime_name' => 'Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san',
+        'release_date' => '2024-07-03',
+        'views' => 188534,
+        'mal_score' => 8.17,
+        'synopsis' => 'Smart, refined, and strikingly gorgeous, half-Russian half-Japanese Alisa Mikhailovna Kujou is considered the idol of her school. With her long silver hair, mesmerizing blue eyes, and exceptionally fair skin, she has captured the hearts of countless male students while being highly admired by all others. Even so, due to her seemingly unapproachable persona, everyone remains wary around the near-flawless girl.
+
+        One of the few exceptions is Alisas benchmate Masachika Kuze, a relatively average boy who spends his days watching anime and playing gacha games. Despite his nonchalant demeanor, Masachika is the sole student to receive Alisas attention. Unable to be fully honest, Alisa is frequently harsh on Masachika and only expresses her affection in Russian. Unbeknownst to her, however, Masachika actually understands the language yet simply pretends otherwise for his own amusement.
+
+        As the odd pair continues to exchange witty and playful remarks, their relationship gradually grows more romantic and delightful—and Alisa might finally learn to freely convey her true feelings.',
+        'trailer_url' => 'pBX6TtOlYow',
+        'total_episodes' => 12,
+        'image_url' => 'anime_images/tokidoki.jpg',
+        'studio_id' => 10,
+        'season_id' => 71
+      ],
+      [
+        'anime_name' => 'JoJo no Kimyou na Bouken (TV)',
+        'release_date' => '2012-10-06',
+        'views' => 1682425,
+        'mal_score' => 7.88,
+        'synopsis' => 'The year is 1868; English nobleman George Joestar and his son Jonathan become indebted to Dario Brando after being rescued from a carriage incident. What the Joestars dont realize, however, is that Dario had no intention of helping them; he believed they were dead and was trying to ransack their belongings. After Darios death 12 years later, George—hoping to repay his debt—adopts his son, Dio.
+
+        While he publicly fawns over his new father, Dio secretly plans to steal the Joestar fortune. His first step is to create a divide between George and Jonathan. By constantly outdoing his foster brother, Dio firmly makes his place in the Joestar family. But when Dio pushes Jonathan too far, Jonathan defeats him in a brawl.
+
+        Years later, the two appear to be close friends to the outside world. But trouble brews again when George falls ill, as Jonathan suspects that Dio is somehow behind the incident—and it appears he has more tricks up his sleeve.',
+        'trailer_url' => 'PGVSViecHWE',
+        'total_episodes' => 26,
+        'image_url' => 'anime_images/jojo.jpg',
+        'studio_id' => 14,
+        'season_id' => 24
+      ],
+      //lanjut anime ke 31
     ];
 
     Anime::insert($anime);
