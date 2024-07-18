@@ -241,7 +241,27 @@ class AnimeGenreSeeder extends Seeder
                 'anime_id' => 27,
                 'genre_id' => 10
             ],
-            // lanjut 28
+            [
+                'anime_id' => 28,
+                'genre_id' => 1
+            ],
+            [
+                'anime_id' => 28,
+                'genre_id' => 10
+            ],
+            [
+                'anime_id' => 29,
+                'genre_id' => 1
+            ],
+            [
+                'anime_id' => 29,
+                'genre_id' => 4
+            ],
+            [
+                'anime_id' => 29,
+                'genre_id' => 10
+            ],
+            // lanjut 30
         ];
 
         AnimeGenre::insert($anime_genre);

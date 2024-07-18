@@ -397,7 +397,34 @@ As Gojou and Kitagawa work together on one cosplay outfit after another, they ca
                 'studio_id' => 11,
                 'season_id' => 64
             ],
-            //lanjut anime ke 28
+            [
+                'anime_name' => 'World Trigger',
+                'release_date' => '2014-10-05',
+                'views' => 426765,
+                'mal_score' => 7.58,
+                'synopsis' => 'When a gate to another world suddenly opens on Earth, Mikado City is invaded by strange creatures known as "Neighbors," malicious beings impervious to traditional weaponry. In response to their arrival, an organization called the Border Defense Agency has been established to combat the Neighbor menace through special weapons called "Triggers." Even though several years have passed after the gate first opened, Neighbors are still a threat and members of Border remain on guard to ensure the safety of the planet.
+
+                Despite this delicate situation, members-in-training, such as Osamu Mikumo, are not permitted to use their Triggers outside of headquarters. But when the mysterious new student in his class is dragged into a forbidden area by bullies, they are attacked by Neighbors, and Osamu has no choice but to do what he believes is right. Much to his surprise, however, the transfer student Yuuma Kuga makes short work of the aliens, revealing that he is a humanoid Neighbor in disguise.',
+                'trailer_url' => '2oui7JLlBpk',
+                'total_episodes' => 73,
+                'image_url' => 'anime_images/worldTrigger.jpg',
+                'studio_id' => 11,
+                'season_id' => 32
+            ],
+            [
+                'anime_name' => 'Code Geass: Hangyaku no Lelouch',
+                'release_date' => '2006-10-06',
+                'views' => 2272903,
+                'mal_score' => 8.70,
+                'synopsis' => 'In the year 2010, the Holy Empire of Britannia is establishing itself as a dominant military nation, starting with the conquest of Japan. Renamed to Area 11 after its swift defeat, Japan has seen significant resistance against these tyrants in an attempt to regain independence.
+
+                Lelouch Lamperouge, a Britannian student, unfortunately finds himself caught in a crossfire between the Britannian and the Area 11 rebel armed forces. He is able to escape, however, thanks to the timely appearance of a mysterious girl named C.C., who bestows upon him Geass, the "Power of Kings." Realizing the vast potential of his newfound "power of absolute obedience," Lelouch embarks upon a perilous journey as the masked vigilante known as Zero, leading a merciless onslaught against Britannia in order to get revenge once and for all.',
+                'total_episodes' => 25,
+                'image_url' => 'anime_images/codeGeass.jpg',
+                'studio_id' => 12,
+                'season_id' => 4
+            ],
+            //lanjut anime ke 30
         ];
 
         Anime::insert($anime);
