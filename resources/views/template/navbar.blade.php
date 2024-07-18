@@ -33,11 +33,12 @@
             </div>
           </div>
           <div class="search-section flex items-center w-4/12 bg-black m-[6px] rounded-md">
-            <input type="text" class="bg-transparent outline-none focus:ring-0 text-white w-full px-4 h-full"
-              placeholder="Search...">
-            <button class="bg-grayLight px-[8px] py-[5px] h-full rounded-r-md">
-              <img src="{{ asset('/image/search.svg') }}" class="w-4 h-4" alt="Search">
-            </button>
+            <form action="{{ route('search') }}" method="GET" class="w-full flex">
+                <input type="text" name="query" class="bg-transparent border-1 outline-none focus:ring-0 text-white w-full px-4" placeholder="Search...">
+                <button type="submit" class="bg-gray-600 p-2">
+                    <img src="{{ asset('/image/search.svg') }}" class="w-4 h-4" alt="Search">
+                </button>
+            </form>
           </div>
         </div>
       </div>
