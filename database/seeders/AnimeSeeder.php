@@ -349,7 +349,7 @@ As Gojou and Kitagawa work together on one cosplay outfit after another, they ca
         'views' => 266549,
         'mal_score' => 8.36,
         'synopsis' => 'Aquas desire for revenge takes center stage as he navigates the dark underbelly of the entertainment world alongside his twin sister, Ruby. While Ruby follows in their slain mothers footsteps to become an idol, Aqua joins a famous theater troupe in hopes of uncovering clues to the identity of his father—the man who arranged their mothers untimely death, and the man who once starred in the same troupe Aqua hopes to infiltrate.',
-        'trailer_url' => 'QMuajQlx64c',
+        'trailer_url' => 'HRy5w-_zuIg',
         'total_episodes' => 13,
         'image_url' => 'anime_images/oshi2.jpg',
         'studio_id' => 10,
@@ -457,7 +457,61 @@ As Gojou and Kitagawa work together on one cosplay outfit after another, they ca
         'studio_id' => 14,
         'season_id' => 24
       ],
-      //lanjut anime ke 31
+      [
+        'anime_name' => 'NieR:Automata Ver1.1a Part 2',
+        'release_date' => '2024-07-05',
+        'views' => 59557,
+        'mal_score' => 7.80,
+        'synopsis' => 'Second part of NieR:Automata Ver1.1a',
+        'trailer_url' => '441v-JXm0CE',
+        'total_episodes' => 12,
+        'image_url' => 'anime_images/nier.jpg',
+        'studio_id' => 8,
+        'season_id' => 71
+      ],
+      [
+        'anime_name' => 'Make Heroine ga Oosugiru!',
+        'release_date' => '2024-07-14',
+        'views' => 50660,
+        'mal_score' => 8.09,
+        'synopsis' => 'Kazuhiko Nukumizu, a self-proclaimed "background character," accidentally witnessed his popular classmate Anna Yanami being rejected by her childhood friend. Since then, Kazuhiko has become involved with several loser heroines, including Anna.',
+        'trailer_url' => 'uytJ6_KTCZI',
+        'total_episodes' => 12, 
+        'image_url' => 'anime_images/make.jpg',
+        'studio_id' => 8,
+        'season_id' => 71
+      ],
+      [
+        'anime_name' => 'Sen to Chihiro no Kamikakushi',
+        'release_date' => '2001-07-01',
+        'views' => 1874282,
+        'mal_score' => 8.77,
+        'synopsis' => 'Stubborn, spoiled, and naïve, 10-year-old Chihiro Ogino is less than pleased when she and her parents discover an abandoned amusement park on the way to their new house. Cautiously venturing inside, she realizes that there is more to this place than meets the eye, as strange things begin to happen once dusk falls. Ghostly apparitions and food that turns her parents into pigs are just the start—Chihiro has unwittingly crossed over into the spirit world. Now trapped, she must summon the courage to live and work amongst spirits, with the help of the enigmatic Haku and the cast of unique characters she meets along the way.
+
+        Vivid and intriguing, Sen to Chihiro no Kamikakushi tells the story of Chihiros journey through an unfamiliar world as she strives to save her parents and return home.',
+        'trailer_url' => 'ByXuk9QqQkk',
+        'total_episodes' => 1, 
+        'image_url' => 'anime_images/spirit.jpg',
+        'studio_id' => 7,
+        'season_id' => 1
+      ],
+      [
+        'anime_name' => 'Sousou no Frieren',
+        'release_date' => '2023-09-29',
+        'views' => 811958,
+        'mal_score' => 9.35,
+        'synopsis' => 'During their decade-long quest to defeat the Demon King, the members of the hero\'s party—Himmel himself, the priest Heiter, the dwarf warrior Eisen, and the elven mage Frieren—forge bonds through adventures and battles, creating unforgettable precious memories for most of them.
+
+        However, the time that Frieren spends with her comrades is equivalent to merely a fraction of her life, which has lasted over a thousand years. When the party disbands after their victory, Frieren casually returns to her "usual" routine of collecting spells across the continent. Due to her different sense of time, she seemingly holds no strong feelings toward the experiences she went through.
+        
+        As the years pass, Frieren gradually realizes how her days in the hero\'s party truly impacted her. Witnessing the deaths of two of her former companions, Frieren begins to regret having taken their presence for granted; she vows to better understand humans and create real personal connections. Although the story of that once memorable journey has long ended, a new tale is about to begin.',
+        'trailer_url' => 'ZEkwCGJ3o7M',
+        'total_episodes' => 28, 
+        'image_url' => 'anime_images/frieren.jpg',
+        'studio_id' => 3,
+        'season_id' => 68
+      ],
+      //lanjut anime ke 35
     ];
 
     Anime::insert($anime);
