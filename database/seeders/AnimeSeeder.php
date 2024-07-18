@@ -222,7 +222,7 @@ Unfortunately for Loid, even a man of his talents has trouble playing the figure
             [
                 'anime_name' => 'Vivy: Fluorite Eye\'s Song',
                 'release_date' => '2021-04-03',
-                'views' => 544,635,
+                'views' => 544635,
                 'mal_score' => 8.39,
                 'synopsis' => 'When highly evolved AIs set out to eradicate mankind, the carnage that ensues fills the air with the stench of fresh blood and burning bodies. In a desperate bid to prevent the calamity from ever occurring, a scientist bets everything on a remnant from the past.
 
@@ -284,7 +284,7 @@ Enduring many months of grueling training, Izuku enrolls in UA High, a prestigio
             [
                 'anime_name' => 'Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen',
                 'release_date' => '2019-01-12',
-                'views' => 1,758,869,
+                'views' => 1758869,
                 'mal_score' => 8.40,
                 'synopsis' => 'At the renowned Shuchiin Academy, Miyuki Shirogane and Kaguya Shinomiya are the student body\'s top representatives. Ranked the top student in the nation and respected by peers and mentors alike, Miyuki serves as the student council president. Alongside him, the vice president Kaguya—eldest daughter of the wealthy Shinomiya family—excels in every field imaginable. They are the envy of the entire student body, regarded as the perfect couple.
 
