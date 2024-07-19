@@ -82,25 +82,6 @@
     leftArrow.style.display = 'flex';
     rightArrow.style.display = 'flex';
 
-
-    function moveCarousel() {
-      index++;
-      if (index >= totalItems) {
-        index = 0;
-        track.style.transition = 'none';
-        track.style.transform = 'translateX(0)';
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            track.style.transition = 'transform 0.5s ease-in-out';
-            track.style.transform = `translateX(-${index * 100}%)`;
-          });
-        });
-      } else {
-        track.style.transition = 'transform 0.5s ease-in-out';
-        track.style.transform = `translateX(-${index * 630}px)`;
-      }
-    }
-
     function moveCarouselLeft() {
       index--;
       track.style.transition = 'transform 0.5s ease-in-out';
@@ -111,7 +92,14 @@
     function moveCarouselRight() {
       index++;
       track.style.transition = 'transform 0.5s ease-in-out';
-      track.style.transform = `translateX(-${index * 630}px)`;
+      if (index + 1 >= totalItems) {
+        console.log(index + 1);
+        console.log(totalItems);
+        console.log(items.length % 3);
+        track.style.transform = `translateX(-${index * 630 - ((3 - (items.length % 3)) * 240)}px)`;
+      } else {
+        track.style.transform = `translateX(-${index * 630}px)`;
+      }
       checkArrow()
     }
 
