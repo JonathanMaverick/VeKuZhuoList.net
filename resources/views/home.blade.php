@@ -51,16 +51,23 @@
         </div>
         <div class="top-anime-container bg-grayDark">
           @foreach ($topAnimesView as $anime)
-            <a href="{{ route('anime.show', $anime->id) }}">
-              <div class="top-anime-item flex px-[10px] py-[15px] gap-2">
-                <div class="number text-white">{{ $loop->iteration }}</div>
-                <div class="content flex w-full gap-[10px]">
-                  <div class="left"><img src="{{ Storage::url($anime->image_url) }}" alt="" class="h-[100px]">
+            <div class="top-anime-item flex px-[10px] py-[15px] gap-2">
+              <div class="number text-white">{{ $loop->iteration }}</div>
+              <div class="content flex w-full gap-[10px]">
+                <div class="left"><img src="{{ Storage::url($anime->image_url) }}" alt="" class="h-[100px]">
+                </div>
+                <div class="right flex-1 flex flex-col gap-[5px]">
+                  <a class="title text-customBlueLight hover:underline leading-5"
+                    href="{{ route('anime.show', $anime->id) }}">
+                    {{ $anime->anime_name }}
+                  </a>
+                  <div class="description text-[13px]">
+                    <p class="text-lightFont">{{ $anime->total_episodes }} eps, scored {{ $anime->mal_score }}</p>
+                    <p class="text-lightFont">{{ $anime->views }} views</p>
                   </div>
-                  <div class="right flex-1"></div>
                 </div>
               </div>
-            </a>
+            </div>
           @endforeach
         </div>
       </div>
