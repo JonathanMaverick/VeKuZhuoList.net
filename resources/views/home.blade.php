@@ -101,10 +101,14 @@
       index++;
       track.style.transition = 'transform 0.5s ease-in-out';
       if (index + 1 >= totalItems) {
-        console.log(index + 1);
-        console.log(totalItems);
-        console.log(items.length % 3);
-        track.style.transform = `translateX(-${index * 630 - ((3 - (items.length % 3)) * 240)}px)`;
+        remaining = items.length % 3
+        let x = 153;
+        if (remaining > 1) {
+          console.log("tes");
+          x = x + (remaining - 1) * 210
+        }
+        track.style.transform =
+          `translateX(-${(index-1) * 630 + (x)}px)`;
       } else {
         track.style.transform = `translateX(-${index * 630}px)`;
       }
