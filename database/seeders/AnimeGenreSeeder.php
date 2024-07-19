@@ -320,6 +320,14 @@ class AnimeGenreSeeder extends Seeder
       [
         'anime_id' => 35,
         'genre_id' => 2
+      ],
+      [
+        'anime_id' => 36,
+        'genre_id' => 9
+      ],
+      [
+        'anime_id' => 36,
+        'genre_id' => 11
       ]
       // lanjut 36
     ];
