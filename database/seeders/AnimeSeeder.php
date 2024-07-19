@@ -527,6 +527,18 @@ Determined to accomplish their seemingly insurmountable mission, Natsu and his f
         'studio_id' => 8,
         'season_id' => 71
       ],
+      [
+        'anime_name' => 'Giji Harem',
+        'release_date' => '2024-07-05',
+        'views' => 82246,
+        'mal_score' => 7.58,
+        'synopsis' => "Eiji Kitahama, a second year high school student, just wants to be popular. To help him realize this dream, Rin Nanakura, his junior in the drama club, uses her acting skills to create a harem of loving girls for him. Though the various girls all show fondness toward Eiji, the affection of the actress behind them is very real. Rin's colorful acting continuously delights Eiji, but will the starlet herself ever make her way into his heart?",
+        'trailer_url' => 'g_59WnHpSPY',
+        'total_episodes' => 12,
+        'image_url' => 'anime_images/gijiharem.jpg',
+        'studio_id' => 3,
+        'season_id' => 71
+      ]
       //lanjut anime ke 35
     ];
 
