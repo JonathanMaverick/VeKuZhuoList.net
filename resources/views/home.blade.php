@@ -34,7 +34,8 @@
               @foreach ($currentSeasonAnimes as $anime)
                 <a href="{{ route('anime.show', $anime->id) }}">
                   <div class="anime-item w-[200px] hover:brightness-50 transition duration-300 relative">
-                    <img src="{{ Storage::url($anime->image_url) }}" alt="{{ $anime->anime_name }}" class="w-full">
+                    <img src="{{ Storage::url($anime->image_url) }}" alt="{{ $anime->anime_name }}"
+                      class="w-full h-[282.66px]">
                     <div class="absolute inset-x-0 bottom-0 h-[180px] bg-gradient-to-t from-black via-transparent"></div>
                     <p class="absolute text-white inset-0 p-1 flex items-end text-[14px]">{{ $anime->anime_name }}</p>
                   </div>
