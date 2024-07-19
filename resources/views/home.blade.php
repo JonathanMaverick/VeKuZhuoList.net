@@ -47,10 +47,10 @@
       </div>
       <div class="sub-content w-2/6 border-l-[1px] border-border px-[10px] py-[6px] my-[8px]">
         <div class="title bg-grayLight p-2">
-          <h2 class="text-white">Top Anime</h2>
+          <h2 class="text-white">Top Viewed Anime</h2>
         </div>
         <div class="top-anime-container bg-grayDark">
-          @foreach ($topAnimes as $anime)
+          @foreach ($topAnimesView as $anime)
             <a href="{{ route('anime.show', $anime->id) }}">
               <div class="top-anime-item flex px-[10px] py-[15px] gap-2">
                 <div class="number text-white">{{ $loop->iteration }}</div>
