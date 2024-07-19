@@ -389,7 +389,7 @@ As Gojou and Kitagawa work together on one cosplay outfit after another, they ca
         'synopsis' => 'Dreams are doomed to die in Night City, a futuristic Californian metropolis. As a teenager living in the citys slums, David Martinez is trying to fulfill his mothers lifelong wish for him to reach the top of Arasaka, the worlds leading security corporation. To this end, he attends the prestigious Arasaka Academy while his mother works tirelessly to keep their family afloat.
 
                 When an incident with a street gang leaves Davids life in tatters, he stumbles upon Sandevistan cyberware—a prosthetic that grants its wearer superhuman speed. Fueled by rage, David implants the device in his back, using it to exact revenge on one of his tormentors. This gets him expelled from the academy, shattering his hopes of ever making his mother proud.
-                
+
                 After witnessing Davids newfound abilities, the beautiful data thief Lucyna "Lucy" Kushinada offers to team up with him, handing him a ticket to salvation. However, associating with Lucy introduces David to the world of Edgerunners—cyborg criminals who will break any law for money. Edgerunners often lose their lives, if the cyberware does not break their minds first; but in his fight for survival inside a corrupt system, David is ready to risk it all.',
         'trailer_url' => 'MUJFsL_rE6E',
         'total_episodes' => 10,
@@ -503,13 +503,29 @@ As Gojou and Kitagawa work together on one cosplay outfit after another, they ca
         'synopsis' => 'During their decade-long quest to defeat the Demon King, the members of the hero\'s party—Himmel himself, the priest Heiter, the dwarf warrior Eisen, and the elven mage Frieren—forge bonds through adventures and battles, creating unforgettable precious memories for most of them.
 
         However, the time that Frieren spends with her comrades is equivalent to merely a fraction of her life, which has lasted over a thousand years. When the party disbands after their victory, Frieren casually returns to her "usual" routine of collecting spells across the continent. Due to her different sense of time, she seemingly holds no strong feelings toward the experiences she went through.
-        
+
         As the years pass, Frieren gradually realizes how her days in the hero\'s party truly impacted her. Witnessing the deaths of two of her former companions, Frieren begins to regret having taken their presence for granted; she vows to better understand humans and create real personal connections. Although the story of that once memorable journey has long ended, a new tale is about to begin.',
         'trailer_url' => 'ZEkwCGJ3o7M',
         'total_episodes' => 28,
         'image_url' => 'anime_images/frieren.jpg',
         'studio_id' => 3,
         'season_id' => 68
+      ],
+      [
+        'anime_name' => 'Fairy Tail: 100-nen Quest',
+        'release_date' => '2024-07-07',
+        'views' => 114683,
+        'mal_score' => 8.18,
+        'synopsis' => "The 100 Years Quest: a mission so challenging and hazardous that it has remained unaccomplished for over a century. While countless mages have attempted to take on this grueling objective, their results ended in either overwhelming defeat or worse. Nonetheless, Natsu Dragneel and his friends—Lucy Heartfilia, Gray Fullbuster, Erza Scarlet, and Wendy Marvell, along with the exceeds Happy and Charlés—ambitiously embark on the quest.
+
+A year after the Fairy Tail guild has overcome the diabolical forces of Acnologia and Zeref, Natsu and his team trek into the northern continent of Guiltina, where they seek out the employer of the 100 Years Quest and receive their nearly impossible mission: to seal away the Five Dragon Gods—a group of individuals with such vast power that, if left alone, could cause global devastation. Meanwhile, a spirited new member named Touka is recruited to Fairy Tail. Although her vibrant energy and passionate nature makes her perfect for the guild, there seems to be more to her than meets the eye.
+
+Determined to accomplish their seemingly insurmountable mission, Natsu and his friends begin their treacherous search for the Dragon Gods. However, once encountering a new dark guild named Diabolos, along with the newest recruit of Fairy Tail revealing her true colors, Natsu and his team will find that the 100 Years Quest isn't the only challenge they face.",
+        'trailer_url' => 'FoNgKRyKJhk',
+        'total_episodes' => 24,
+        'image_url' => 'anime_images/fairy_tail.jpg',
+        'studio_id' => 8,
+        'season_id' => 71
       ],
       //lanjut anime ke 35
     ];
