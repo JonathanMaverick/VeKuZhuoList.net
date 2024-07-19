@@ -31,7 +31,7 @@
               <img src="{{ asset('/image/chevron-right.svg') }}" alt="">
             </div>
             <div class="carousel-track flex gap-[10px]">
-              @foreach ($currentSeasonAnime as $anime)
+              @foreach ($currentSeasonAnimes as $anime)
                 <a href="{{ route('anime.show', $anime->id) }}">
                   <div class="anime-item w-[200px] hover:brightness-50 transition duration-300 relative">
                     <img src="{{ Storage::url($anime->image_url) }}" alt="{{ $anime->anime_name }}" class="w-full">
@@ -45,8 +45,22 @@
         </div>
       </div>
       <div class="sub-content w-2/6 border-l-[1px] border-border px-[10px] py-[6px] my-[8px]">
-        <div class="bg-grayLight p-2">
-          <h2 class="text-white">Top Airing Anime</h2>
+        <div class="title bg-grayLight p-2">
+          <h2 class="text-white">Top Anime</h2>
+        </div>
+        <div class="top-anime-container bg-grayDark">
+          @foreach ($topAnimes as $anime)
+            <a href="{{ route('anime.show', $anime->id) }}">
+              <div class="top-anime-item flex px-[10px] py-[15px] gap-2">
+                <div class="number text-white">{{ $loop->iteration }}</div>
+                <div class="content flex w-full gap-[10px]">
+                  <div class="left"><img src="{{ Storage::url($anime->image_url) }}" alt="" class="h-[100px]">
+                  </div>
+                  <div class="right flex-1"></div>
+                </div>
+              </div>
+            </a>
+          @endforeach
         </div>
       </div>
     </div>

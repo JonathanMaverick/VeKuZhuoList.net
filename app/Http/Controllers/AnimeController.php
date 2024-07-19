@@ -9,9 +9,10 @@ class AnimeController extends Controller
 {
     public function index()
     {
-        $currentSeasonAnime = Anime::where('season_id', 71)->get();;
+        $currentSeasonAnimes = Anime::where('season_id', 71)->get();;
+        $topAnimes = Anime::orderBy('mal_score', 'desc')->take(5)->get();
 
-        return view('home', compact( 'currentSeasonAnime'));
+        return view('home', compact('currentSeasonAnimes', 'topAnimes'));
     }
 
     public function show($id)
@@ -31,5 +32,4 @@ class AnimeController extends Controller
         $animes = Anime::orderBy('views', 'desc')->paginate(10);
         return view('anime.top_anime_views', compact('animes'));
     }
-
 }

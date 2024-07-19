@@ -476,7 +476,7 @@ As Gojou and Kitagawa work together on one cosplay outfit after another, they ca
         'mal_score' => 8.09,
         'synopsis' => 'Kazuhiko Nukumizu, a self-proclaimed "background character," accidentally witnessed his popular classmate Anna Yanami being rejected by her childhood friend. Since then, Kazuhiko has become involved with several loser heroines, including Anna.',
         'trailer_url' => 'uytJ6_KTCZI',
-        'total_episodes' => 12, 
+        'total_episodes' => 12,
         'image_url' => 'anime_images/make.jpg',
         'studio_id' => 8,
         'season_id' => 71
@@ -490,7 +490,7 @@ As Gojou and Kitagawa work together on one cosplay outfit after another, they ca
 
         Vivid and intriguing, Sen to Chihiro no Kamikakushi tells the story of Chihiros journey through an unfamiliar world as she strives to save her parents and return home.',
         'trailer_url' => 'ByXuk9QqQkk',
-        'total_episodes' => 1, 
+        'total_episodes' => 1,
         'image_url' => 'anime_images/spirit.jpg',
         'studio_id' => 7,
         'season_id' => 1
@@ -506,7 +506,7 @@ As Gojou and Kitagawa work together on one cosplay outfit after another, they ca
         
         As the years pass, Frieren gradually realizes how her days in the hero\'s party truly impacted her. Witnessing the deaths of two of her former companions, Frieren begins to regret having taken their presence for granted; she vows to better understand humans and create real personal connections. Although the story of that once memorable journey has long ended, a new tale is about to begin.',
         'trailer_url' => 'ZEkwCGJ3o7M',
-        'total_episodes' => 28, 
+        'total_episodes' => 28,
         'image_url' => 'anime_images/frieren.jpg',
         'studio_id' => 3,
         'season_id' => 68
@@ -516,19 +516,19 @@ As Gojou and Kitagawa work together on one cosplay outfit after another, they ca
 
     Anime::insert($anime);
 
-    for ($i = 0; $i < 300; $i++) {
-      Anime::create([
-        'anime_name' => $faker->words(3, true),
-        'release_date' => $faker->date(),
-        'views' => $faker->numberBetween(1000, 1000000),
-        'mal_score' => $faker->randomFloat(2, 1, 10),
-        'synopsis' => $faker->paragraph(),
-        'trailer_url' => $faker->regexify('[A-Za-z0-9_-]{11}'),
-        'total_episodes' => $faker->numberBetween(12, 500),
-        'image_url' => 'anime_images/' . $faker->word() . '.png',
-        'studio_id' => $faker->numberBetween(1, 10),
-        'season_id' => $faker->numberBetween(1, 10),
-      ]);
-    }
+    // for ($i = 0; $i < 300; $i++) {
+    //   Anime::create([
+    //     'anime_name' => $faker->words(3, true),
+    //     'release_date' => $faker->date(),
+    //     'views' => $faker->numberBetween(1000, 1000000),
+    //     'mal_score' => $faker->randomFloat(2, 1, 10),
+    //     'synopsis' => $faker->paragraph(),
+    //     'trailer_url' => $faker->regexify('[A-Za-z0-9_-]{11}'),
+    //     'total_episodes' => $faker->numberBetween(12, 500),
+    //     'image_url' => 'anime_images/' . $faker->word() . '.png',
+    //     'studio_id' => $faker->numberBetween(1, 10),
+    //     'season_id' => $faker->numberBetween(1, 10),
+    //   ]);
+    // }
   }
 }
