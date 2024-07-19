@@ -21,12 +21,22 @@
           <div class="flex justify-between border-b-[1px] border-borderLight mb-[8px] pb-[2px]">
             <h1 class="text-[18px] text-white">Summer 2024 Anime</h1>
           </div>
-          <div class="anime-carousel flex overflow-hidden relative">
+          <div class="anime-carousel overflow-hidden relative flex items-center">
+            <div
+              class="carousel-button-left absolute w-12 h-24 bg-black rounded-r-full z-1 items-center justify-start hidden">
+              <img src="{{ asset('/image/chevron-left.svg') }}" alt="">
+            </div>
+            <div
+              class="carousel-button-right absolute w-12 h-24 bg-black rounded-l-full z-1 right-0 items-center justify-end hidden">
+              <img src="{{ asset('/image/chevron-right.svg') }}" alt="">
+            </div>
             <div class="carousel-track flex gap-[10px]">
               @foreach ($currentSeasonAnime as $anime)
                 <a href="{{ route('anime.show', $anime->id) }}">
-                  <div class="anime-item w-[200px] hover:brightness-50 transition duration-300">
+                  <div class="anime-item w-[200px] hover:brightness-50 transition duration-300 relative">
                     <img src="{{ Storage::url($anime->image_url) }}" alt="{{ $anime->anime_name }}" class="w-full">
+                    <div class="absolute inset-x-0 bottom-0 h-[180px] bg-gradient-to-t from-black via-transparent"></div>
+                    <p class="absolute text-white inset-0 p-1 flex items-end text-[14px]">{{ $anime->anime_name }}</p>
                   </div>
                 </a>
               @endforeach
@@ -43,10 +53,21 @@
   </div>
 
   <script>
+    const leftArrow = document.querySelector('.carousel-button-left')
+    const rightArrow = document.querySelector('.carousel-button-right')
+    const carousel = document.querySelector('.anime-carousel')
     const track = document.querySelector('.carousel-track');
     const items = document.querySelectorAll('.anime-item');
     const totalItems = Math.ceil(items.length / 3);
     let index = 0;
+
+    leftArrow.style.opacity = '0';
+    rightArrow.style.opacity = '0';
+    leftArrow.style.transition = 'all 0.2s ease-in-out';
+    rightArrow.style.transition = 'all 0.2s ease-in-out';
+    leftArrow.style.display = 'flex';
+    rightArrow.style.display = 'flex';
+
 
     function moveCarousel() {
       index++;
@@ -67,45 +88,50 @@
     }
 
     function moveCarouselLeft() {
-      if (index === 0) {
-        index = totalItems;
-        track.style.transition = 'none';
-        track.style.transform = `translateX(-${index * 100}%)`;
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            track.style.transition = 'transform 0.5s ease-in-out';
-            index--;
-            track.style.transform = `translateX(-${index * 100}%)`;
-          });
-        });
-      } else {
-        index--;
-        track.style.transform = `translateX(-${index * 100}%)`;
-      }
+      index--;
+      track.style.transition = 'transform 0.5s ease-in-out';
+      track.style.transform = `translateX(-${index * 630}px)`;
+      checkArrow()
     }
 
     function moveCarouselRight() {
-      if (index >= totalItems - 1) {
-        index = -1;
-        track.style.transition = 'none';
-        track.style.transform = 'translateX(0)';
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            track.style.transition = 'transform 0.5s ease-in-out';
-            index++;
-            track.style.transform = `translateX(-${index * 100}%)`;
-          });
-        });
+      index++;
+      track.style.transition = 'transform 0.5s ease-in-out';
+      track.style.transform = `translateX(-${index * 630}px)`;
+      checkArrow()
+    }
+
+    function checkArrow() {
+      if (index != 0) {
+        leftArrow.style.display = 'flex';
+        leftArrow.style.opacity = '0.85';
       } else {
-        index++;
-        track.style.transform = `translateX(-${index * 100}%)`;
+        leftArrow.style.opacity = '0';
+        leftArrow.style.display = 'none';
+      }
+
+      if (index + 1 < totalItems) {
+        rightArrow.style.display = 'flex';
+        rightArrow.style.opacity = '0.85';
+      } else {
+        rightArrow.style.opacity = '0';
+        rightArrow.style.display = 'none';
       }
     }
 
-    setInterval(moveCarousel, 3000);
+    carousel.addEventListener('mouseenter', () => {
+      checkArrow()
+    });
 
-    document.querySelector('.carousel-button-left').addEventListener('click', moveCarouselLeft);
-    document.querySelector('.carousel-button-right').addEventListener('click', moveCarouselRight);
+    carousel.addEventListener('mouseleave', () => {
+      leftArrow.style.transition = 'all 0.2s ease-in-out';
+      rightArrow.style.transition = 'all 0.2s ease-in-out';
+      leftArrow.style.opacity = '0';
+      rightArrow.style.opacity = '0';
+    });
+
+    leftArrow.addEventListener('click', moveCarouselLeft);
+    rightArrow.addEventListener('click', moveCarouselRight);
   </script>
 
 @endsection
