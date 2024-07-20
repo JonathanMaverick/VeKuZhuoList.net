@@ -46,7 +46,7 @@
       </div>
       <div class="random-anime-section">
         <div class="flex justify-between border-b-[1px] border-borderLight pb-[2px]">
-          <h1 class="text-[18px] text-white">Random Anime</h1>
+          <h1 class="text-[18px] text-white">Picked for you</h1>
         </div>
         <div class="random-anime-container flex flex-col">
           @foreach ($randomAnimes as $anime)
