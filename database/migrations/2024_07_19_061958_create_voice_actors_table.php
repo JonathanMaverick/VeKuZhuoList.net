@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('voice_actors', function (Blueprint $table) {
             $table->id();
-            $table->string('voice_actor_name');
+            $table->string('voice_actor_name')->unique();
             $table->string('voice_actor_image');
             $table->timestamps();
         });
