@@ -416,25 +416,25 @@ class CharacterSeeder extends Seeder
                 'character_name' => 'Lelouch',
                 'character_image' => 'https://cdn.myanimelist.net/images/characters/8/406163.jpg',
                 'anime_id' => 28,
-                'voice_actor_id' => 65
+                'voice_actor_id' => 63
             ],
             [
                 'character_name' => 'C.C.',
                 'character_image' => 'https://cdn.myanimelist.net/images/characters/13/33815.jpg',
                 'anime_id' => 28,
-                'voice_actor_id' => 66
+                'voice_actor_id' => 64
             ],
             [
                 'character_name' => 'Kallen Stadfield',
                 'character_image' => 'https://cdn.myanimelist.net/images/characters/8/31533.jpg',
                 'anime_id' => 28,
-                'voice_actor_id' => 67
+                'voice_actor_id' => 65
             ],
             [
                 'character_name' => 'Suzaku Kururugi',
                 'character_image' => 'https://cdn.myanimelist.net/images/characters/2/31564.jpg',
                 'anime_id' => 28,
-                'voice_actor_id' => 68
+                'voice_actor_id' => 66
             ],
             [
                 'character_name' => 'Alisa Mikhaliovna Kujou',
@@ -476,25 +476,25 @@ class CharacterSeeder extends Seeder
                 'character_name' => 'Anna Yanami',
                 'character_image' => 'https://cdn.myanimelist.net/images/characters/16/542560.jpg',
                 'anime_id' => 32,
-                'voice_actor_id' => 69
+                'voice_actor_id' => 67
             ],
             [
                 'character_name' => 'Kazuhiko Nukumizu',
                 'character_image' => 'https://cdn.myanimelist.net/images/characters/9/542556.jpg',
                 'anime_id' => 32,
-                'voice_actor_id' => 70
+                'voice_actor_id' => 68
             ],
             [
                 'character_name' => 'Lemon Yakishio',
                 'character_image' => 'https://cdn.myanimelist.net/images/characters/11/542562.jpg',
                 'anime_id' => 32,
-                'voice_actor_id' => 71
+                'voice_actor_id' => 69
             ],
             [
                 'character_name' => 'Chika Komari',
                 'character_image' => 'https://cdn.myanimelist.net/images/characters/15/542561.jpg',
                 'anime_id' => 32,
-                'voice_actor_id' => 72
+                'voice_actor_id' => 70
             ],
             [
                 'character_name' => 'Haku',
@@ -555,6 +555,24 @@ class CharacterSeeder extends Seeder
                 'character_image' => 'https://cdn.myanimelist.net/images/characters/6/105543.jpg',
                 'anime_id' => 35,
                 'voice_actor_id' => 62
+            ],
+            [
+                'character_name' => 'Gray Fullbuster',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/7/548119.jpg',
+                'anime_id' => 35,
+                'voice_actor_id' => 8
+            ],
+            [
+                'character_name' => 'Rin Nanakura',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/2/426276.jpg',
+                'anime_id' => 36,
+                'voice_actor_id' => 31
+            ],
+            [
+                'character_name' => 'Eiji Kitahama',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/14/393191.jpg',
+                'anime_id' => 36,
+                'voice_actor_id' => 38
             ]
         ];
 
