@@ -213,6 +213,90 @@ class VoiceActorSeeder extends Seeder
             [
                 'voice_actor_name' => 'Asaki Yuikawa',
                 'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/3/74543.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Aoi Yuuki',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/3/67808.jpg'
+            ],
+            [
+                'voice_actor_name' => 'KENN',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/2/60780.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Sumire Uesaka',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/2/76647.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Kohei Amasaki',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/2/79690.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Tomokazu Sugita',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/1/81054.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Takehito Koyasu',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/1/63375.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Miyu Irino',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/2/80313.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Rumi Hiragi',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/1/18391.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Kana Ichinose',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/3/70398.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Chiaki Kobayashi',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/characters/2/523292.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Ikumi Hasegawa',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/1/81473.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Tomo Muranaka',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/1/75055.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Nao Tamura',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/2/43723.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Jun Fukuyawa',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/3/60810.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Yukana',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/2/45746.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Ami Koshimizu',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/3/68022.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Takahiro Sakurai',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/3/62791.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Hikaru Toono',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/1/79680.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Shuuichirou Umeda',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/3/79692.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Shion Wakayama',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/1/79679.jpg'
+            ],
+            [
+                'voice_actor_name' => 'Momoka Terasawa',
+                'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/1/79678.jpg'
             ]
         ];
 

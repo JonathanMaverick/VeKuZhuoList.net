@@ -365,7 +365,196 @@ class CharacterSeeder extends Seeder
                 'voice_actor_id' => 8
             ],
             [
-                
+                'character_name' => 'Izumi Miyamura',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/12/507110.jpg',
+                'anime_id' => 25,
+                'voice_actor_id' => 43
+            ],
+            [
+                'character_name' => 'Kyoko Hori',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/6/507111.jpg',
+                'anime_id' => 25,
+                'voice_actor_id' => 41
+            ],
+            [
+                'character_name' => 'Lucy',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/11/486620.jpg',
+                'anime_id' => 26,
+                'voice_actor_id' => 49
+            ],
+            [
+                'character_name' => 'David Martinez',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/11/483437.jpg',
+                'anime_id' => 26,
+                'voice_actor_id' => 50
+            ],
+            [
+                'character_name' => 'Yuuma Kuga',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/12/325835.jpg',
+                'anime_id' => 27,
+                'voice_actor_id' => 63
+            ],
+            [
+                'character_name' => 'Yuuichi Jin',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/12/325835.jpg',
+                'anime_id' => 27,
+                'voice_actor_id' => 8
+            ],
+            [
+                'character_name' => 'Osamu Mikumo',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/12/325835.jpg',
+                'anime_id' => 27,
+                'voice_actor_id' => 9
+            ],
+            [
+                'character_name' => 'Chika Amotari',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/12/325835.jpg',
+                'anime_id' => 27,
+                'voice_actor_id' => 64
+            ],
+            [
+                'character_name' => 'Lelouch',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/8/406163.jpg',
+                'anime_id' => 28,
+                'voice_actor_id' => 65
+            ],
+            [
+                'character_name' => 'C.C.',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/13/33815.jpg',
+                'anime_id' => 28,
+                'voice_actor_id' => 66
+            ],
+            [
+                'character_name' => 'Kallen Stadfield',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/8/31533.jpg',
+                'anime_id' => 28,
+                'voice_actor_id' => 67
+            ],
+            [
+                'character_name' => 'Suzaku Kururugi',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/2/31564.jpg',
+                'anime_id' => 28,
+                'voice_actor_id' => 68
+            ],
+            [
+                'character_name' => 'Alisa Mikhaliovna Kujou',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/5/536830.jpg',
+                'anime_id' => 29,
+                'voice_actor_id' => 51
+            ],
+            [
+                'character_name' => 'Masachika Kuze',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/4/536831.jpg',
+                'anime_id' => 29,
+                'voice_actor_id' => 52
+            ],
+            [
+                'character_name' => 'Josepth Joestar',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/6/252863.jpg',
+                'anime_id' => 30,
+                'voice_actor_id' => 53
+            ],
+            [
+                'character_name' => 'Dio Brando',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/10/252875.jpg',
+                'anime_id' => 30,
+                'voice_actor_id' => 54
+            ],
+            [
+                'character_name' => 'YoRHa 2-gou B-gata',
+                'character_image' => 'https://cdn.myanimelist.net/images/voiceactors/1/63375.jpg',
+                'anime_id' => 31,
+                'voice_actor_id' => 10
+            ],
+            [
+                'character_name' => 'YoRHa 9-gou S-gata',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/10/517865.jpg',
+                'anime_id' => 31,
+                'voice_actor_id' => 26
+            ],
+            [
+                'character_name' => 'Anna Yanami',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/16/542560.jpg',
+                'anime_id' => 32,
+                'voice_actor_id' => 69
+            ],
+            [
+                'character_name' => 'Kazuhiko Nukumizu',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/9/542556.jpg',
+                'anime_id' => 32,
+                'voice_actor_id' => 70
+            ],
+            [
+                'character_name' => 'Lemon Yakishio',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/11/542562.jpg',
+                'anime_id' => 32,
+                'voice_actor_id' => 71
+            ],
+            [
+                'character_name' => 'Chika Komari',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/15/542561.jpg',
+                'anime_id' => 32,
+                'voice_actor_id' => 72
+            ],
+            [
+                'character_name' => 'Haku',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/16/480331.jpg',
+                'anime_id' => 33,
+                'voice_actor_id' => 55
+            ],
+            [
+                'character_name' => 'Chihiro Ogino',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/7/434512.jpg',
+                'anime_id' => 33,
+                'voice_actor_id' => 56
+            ],
+            [
+                'character_name' => 'Frieren',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/7/525105.jpg',
+                'anime_id' => 34,
+                'voice_actor_id' => 32
+            ],
+            [
+                'character_name' => 'Fern',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/7/525105.jpg',
+                'anime_id' => 34,
+                'voice_actor_id' => 57
+            ],
+            [
+                'character_name' => 'Stark',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/2/523292.jpg',
+                'anime_id' => 34,
+                'voice_actor_id' => 58
+            ],
+            [
+                'character_name' => 'Himmel',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/9/523295.jpg',
+                'anime_id' => 34,
+                'voice_actor_id' => 38
+            ],
+            [
+                'character_name' => 'Ubel',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/9/543072.jpg',
+                'anime_id' => 34,
+                'voice_actor_id' => 59
+            ],
+            [
+                'character_name' => 'Natsu Dragneel',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/15/105542.jpg',
+                'anime_id' => 35,
+                'voice_actor_id' => 60
+            ],
+            [
+                'character_name' => 'Erza Scarlet',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/12/492254.jpg',
+                'anime_id' => 35,
+                'voice_actor_id' => 61
+            ],
+            [
+                'character_name' => 'Lucy Heartfilia',
+                'character_image' => 'https://cdn.myanimelist.net/images/characters/6/105543.jpg',
+                'anime_id' => 35,
+                'voice_actor_id' => 62
             ]
         ];
 
