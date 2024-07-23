@@ -30,7 +30,7 @@ class CharacterSeeder extends Seeder
       ],
       [
         'character_name' => 'Sasuke Uchiha',
-        'character_image' => 'https://cdn.myanimelist.net/images/characters/6/284127.jpg',
+        'character_image' => 'https://cdn.myanimelist.net/images/characters/9/131317.jpg',
         'anime_id' => 1,
         'voice_actor_id' => 3
       ],

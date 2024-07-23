@@ -43,7 +43,8 @@ class AnimeController extends Controller
     $genres = Genre::all();
     $studios = Studio::all();
     $seasons = Season::all();
-    return view('anime.add_anime', compact('genres', 'studios', 'seasons'));
+    $genres = Genre::all();
+    return view('anime.add_anime', compact('genres', 'studios', 'seasons', 'genres'));
   }
 
   public function store(Request $request)
