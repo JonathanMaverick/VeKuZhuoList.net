@@ -29,3 +29,6 @@ Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 Route::get('/top_anime_malscore', [AnimeController::class, 'top_anime_malscore'])->name('top_anime_malscore');
 Route::get('/top_anime_views', [AnimeController::class, 'top_anime_views'])->name('top_anime_views');
+
+Route::get('/add_anime', [AnimeController::class, 'add_anime'])->name('add_anime');
+Route::post('/anime', [AnimeController::class, 'store'])->name('anime.store');
