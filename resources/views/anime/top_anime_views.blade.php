@@ -21,7 +21,10 @@
     <tbody>
       @foreach($animes as $anime)
       <tr class="{{ ($loop->index + 1) % 2 == 0 ? 'bg-grayDark' : '' }}">
-        <td class="text-center border-[1px] border-border text-[18px] font-bold">{{$loop->iteration}}</td>
+        @php
+          $rank = ($currentPage - 1) * $perPage + $loop->iteration;
+        @endphp
+        <td class="text-center border-[1px] border-border text-[18px] font-bold">{{$rank}}</td>
         <td class="border-[1px] border-border">
           <div class="flex gap-[10px] p-[10px] ">
             <div class="left"><img src="{{ Storage::url($anime->image_url) }}" alt="" class="h-[100px]"></div>

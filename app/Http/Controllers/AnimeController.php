@@ -29,13 +29,22 @@ class AnimeController extends Controller
   public function top_anime_malscore()
   {
     $animes = Anime::orderBy('mal_score', 'desc')->paginate(10);
-    return view('anime.top_anime_malscore', compact('animes'));
+    return view('anime.top_anime_malscore', [
+        'animes' => $animes,
+        'currentPage' => $animes->currentPage(),
+        'perPage' => $animes->perPage(),
+    ]);
   }
 
   public function top_anime_views()
   {
     $animes = Anime::orderBy('views', 'desc')->paginate(10);
-    return view('anime.top_anime_views', compact('animes'));
+
+    return view('anime.top_anime_views', [
+        'animes' => $animes,
+        'currentPage' => $animes->currentPage(),
+        'perPage' => $animes->perPage(),
+    ]);
   }
 
   public function add_anime()
