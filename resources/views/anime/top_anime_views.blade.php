@@ -42,6 +42,10 @@
       @endforeach
     </tbody>
   </table>
+
+  <div class="pagination w-full">
+    {{$animes->links('pagination::tailwind')}}
+  </div>
 </div>
 
 {{-- <div class="anime-list container mx-auto my-8">
