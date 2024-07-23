@@ -60,7 +60,7 @@
               </a>
               <div class="description text-[13px] text-lightFont">
                 <p class="">{{ $anime->total_episodes }} eps, scored {{ $anime->mal_score }}</p>
-                <p class="mb-1">{{ $anime->views }} views</p>
+                <p class="mb-1">{{ number_format($anime->views) }} views</p>
                 <p class="">{{ Str::words($anime->synopsis, '40', '...') }}</p>
               </div>
             </div>
@@ -71,8 +71,9 @@
     </div>
     <div class="sub-content w-2/6 border-l-[1px] border-border px-[10px] py-[6px] my-[8px] flex flex-col gap-[20px]">
       <div class="top-viewed-anime-section">
-        <div class="title bg-grayLight p-2">
+        <div class="title bg-grayLight p-2 flex justify-between items-center">
           <h2 class="text-white">Top Viewed Anime</h2>
+          <a class="text-customBlueLight hover:underline" href="{{ route('top_anime_views') }}">More</a>
         </div>
         <div class="top-viewed-anime-container bg-grayDark">
           @foreach ($topAnimesView as $anime)
@@ -88,7 +89,7 @@
                 </a>
                 <div class="description text-[13px]">
                   <p class="text-lightFont">{{ $anime->total_episodes }} eps, scored {{ $anime->mal_score }}</p>
-                  <p class="text-lightFont">{{ $anime->views }} views</p>
+                  <p class="text-lightFont">{{ number_format($anime->views) }} views</p>
                 </div>
               </div>
             </div>
@@ -97,8 +98,9 @@
         </div>
       </div>
       <div class="top-rated-anime-section">
-        <div class="title bg-grayLight p-2">
-          <h2 class="text-white">Top Rated Anime</h2>
+        <div class="title bg-grayLight p-2 flex justify-between">
+          <h2 class="text-white items-center">Top Rated Anime</h2>
+          <a class="text-customBlueLight hover:underline" href="{{ route('top_anime_malscore') }}">More</a>
         </div>
         <div class="top-rated-anime-container bg-grayDark">
           @foreach ($topAnimesMal as $anime)
@@ -114,7 +116,7 @@
                 </a>
                 <div class="description text-[13px]">
                   <p class="text-lightFont">{{ $anime->total_episodes }} eps, scored {{ $anime->mal_score }}</p>
-                  <p class="text-lightFont">{{ $anime->views }} views</p>
+                  <p class="text-lightFont">{{ number_format($anime->views)}} views</p>
                 </div>
               </div>
             </div>
