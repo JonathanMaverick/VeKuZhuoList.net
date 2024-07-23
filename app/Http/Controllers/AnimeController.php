@@ -47,28 +47,48 @@ class AnimeController extends Controller
     return view('anime.add_anime', compact('genres', 'studios', 'seasons', 'genres'));
   }
 
-  public function store(Request $request)
+    public function store(Request $request)
     {
-        $validated = $request->validate([
+
+        $rules = [
             'anime_name' => 'required|string|max:255',
             'release_date' => 'required|date',
             'views' => 'required|integer',
-            'mal_score' => 'required|numeric',
+            'mal_score' => 'required|numeric|min:0|max:10',
             'synopsis' => 'required|string',
-            'trailer_url' => 'required|url',
-            'image' => 'required|file|mimes:jpeg,png,jpg,gif|max:2048',
+            'trailer_url' => 'nullable|url',
+            'anime_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'total_episodes' => 'required|integer',
             'studio_id' => 'required|exists:studios,id',
             'season_id' => 'required|exists:seasons,id',
-        ]);
+            'genres' => 'required|array',
+            'genres.*' => 'exists:genres,id',
+        ];
 
-        $path = $request->file('image')->store('images', 'public');
+        $validatedData = $request->validate($rules);
 
-        $validated['image_url'] = $path;
+        if ($request->has('trailer_url')) {
+            $videoId = $this->extractYouTubeVideoId($request->input('trailer_url'));
+            $validatedData['trailer_url'] = $videoId;
+        }
 
-        Anime::create($validated);
+        if ($request->hasFile('anime_image')) {
+            $image = $request->file('anime_image');
+            $path = $image->store('anime_images', 'public');
+            $validatedData['image_url'] = $path;
+        }
 
-        return redirect()->route('home')->with('success', 'Anime added successfully!');
+        $anime = Anime::create($validatedData);
+
+        $anime->genres()->attach($request->genres);
+
+        return redirect()->route('home')->with('success', 'Anime added successfully.');
     }
 
+    private function extractYouTubeVideoId($url)
+    {
+        parse_str(parse_url($url, PHP_URL_QUERY), $query);
+        return $query['v'] ?? null;
+    }
 }
+

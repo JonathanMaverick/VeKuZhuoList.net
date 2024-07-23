@@ -16,7 +16,9 @@ class Anime extends Model
     'trailer_url',
     'image_url',
     'total_episodes',
-  ];
+    'studio_id',
+    'season_id', 
+    ];
 
   public function genres()
   {

@@ -15,7 +15,7 @@
       <tr>
         <th class="border-[1px] border-border">Rank</th>
         <th class="border-[1px] border-border">Title</th>
-        <th class="border-[1px] border-border">Score</th>
+        <th class="border-[1px] border-border">Views</th>
       </tr>
     </thead>
     <tbody>
@@ -27,7 +27,7 @@
             <div class="left"><img src="{{ Storage::url($anime->image_url) }}" alt="" class="h-[100px]"></div>
             <div class="right flex flex-col gap-[2px]">
               <a class="title text-customBlueLight hover:underline leading-5 font-bold text-[15px]"
-                href="{{ route('anime.show', $anime->id) }}">
+                href="{{ route('anime.show', $anime->id)}}">
                 {{ $anime->anime_name }}
               </a>
               <div class="description">
@@ -37,7 +37,7 @@
             </div>
           </div>
         </td>
-        <td class="text-center border-[1px] border-border">{{$anime->mal_score}}</td>
+        <td class="text-center border-[1px] border-border">{{$anime->views}}</td>
       </tr>
       @endforeach
     </tbody>
