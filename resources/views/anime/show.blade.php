@@ -23,7 +23,7 @@
         <p class="text-[25px]">{{number_format($anime->views)}}</p>
       </div>
     </div>
-    <div class="information-section">
+    <div class="information-section mb-[10px]">
       <div class="title text-white border-b-[1px] border-borderLight font-bold text-[16px] my-[10px]">Information</div>
       <div class="content w-full flex flex-col text-white">
         <p>Name: {{$anime->anime_name}}</p>
@@ -38,6 +38,13 @@
             class="text-blue-500">{{ $genre->genre_name }}</a>@if (!$loop->last),@endif
           @endforeach
         </p>
+      </div>
+    </div>
+    <div class="statistic-section mb-[10px]">
+      <div class="title text-white border-b-[1px] border-borderLight font-bold text-[16px] my-[10px]">Statistic</div>
+      <div class="content w-full flex flex-col text-white">
+        <p>Score: {{$anime->mal_score}}</p>
+        <p>Views: {{number_format($anime->views)}}</p>
       </div>
     </div>
   </div>
@@ -66,7 +73,8 @@
             <a class="text-customBlueLight hover:underline" href="">{{$character->character_name}}</a>
           </div>
           <div class="right flex gap-[10px]">
-            <a class="text-customBlueLight hover:underline" href="">{{$character->voiceActor->voice_actor_name}}</a>
+            <a class="text-customBlueLight hover:underline"
+              href="{{ route('voice_actor.show', $character->voiceActor->id) }}">{{$character->voiceActor->voice_actor_name}}</a>
             <img class="w-[44px]" src={{$character->voiceActor->voice_actor_image}} alt="">
           </div>
         </div>
