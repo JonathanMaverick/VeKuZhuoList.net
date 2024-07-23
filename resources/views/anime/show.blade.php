@@ -35,10 +35,7 @@
         <p>Genres:
           @foreach ($anime->genres as $genre)
           <a class="text-customBlueLight hover:underline" href="{{ route('genre.show', $genre->id) }}"
-            class="text-blue-500">{{ $genre->genre_name }}</a>
-          @if (!$loop->last)
-          ,
-          @endif
+            class="text-blue-500">{{ $genre->genre_name }}</a>@if (!$loop->last),@endif
           @endforeach
         </p>
       </div>
