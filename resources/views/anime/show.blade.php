@@ -29,7 +29,7 @@
         <p>Name: {{$anime->anime_name}}</p>
         <p>Release date: {{$anime->release_date}}</p>
         <p>Episodes: {{$anime->total_episodes}}</p>
-        <p>Stuio: <a class="text-customBlueLight hover:underline" href="{{route('studio.show', $anime->studio->id)}}">
+        <p>Studio: <a class="text-customBlueLight hover:underline" href="{{route('studio.show', $anime->studio->id)}}">
             {{$anime->studio->studio_name}}
           </a></p>
         <p>Genres:

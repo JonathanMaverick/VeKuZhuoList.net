@@ -227,10 +227,10 @@ class CharacterSeeder extends Seeder
         'voice_actor_id' => 22
       ],
       [
-        'character_name' => 'Torako "Koshitan" Koshi',
+        'character_name' => 'Torako Koshi',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/6/542120.jpg',
         'anime_id' => 14,
-        'voice_actor_id' => 22
+        'voice_actor_id' => 33
       ],
       [
         'character_name' => 'Vivy (Diva)',
@@ -242,25 +242,25 @@ class CharacterSeeder extends Seeder
         'character_name' => 'Bojji',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/12/451497.jpg',
         'anime_id' => 16,
-        'voice_actor_id' => 33
+        'voice_actor_id' => 34
       ],
       [
         'character_name' => 'Kage',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/8/451498.jpg',
         'anime_id' => 16,
-        'voice_actor_id' => 34
+        'voice_actor_id' => 35
       ],
       [
         'character_name' => 'Edward Elric',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/9/72533.jpg',
         'anime_id' => 17,
-        'voice_actor_id' => 35
+        'voice_actor_id' => 36
       ],
       [
         'character_name' => 'Alphonse Elric',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/5/54265.jpg',
         'anime_id' => 17,
-        'voice_actor_id' => 36
+        'voice_actor_id' => 37
       ],
       [
         'character_name' => 'Shoto Todoroki',
@@ -272,19 +272,19 @@ class CharacterSeeder extends Seeder
         'character_name' => 'Katsuki Bakugo',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/12/299406.jpg',
         'anime_id' => 18,
-        'voice_actor_id' => 37
+        'voice_actor_id' => 38
       ],
       [
         'character_name' => 'Izuku Midoriya',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/12/332526.jpg',
         'anime_id' => 18,
-        'voice_actor_id' => 38
+        'voice_actor_id' => 39
       ],
       [
         'character_name' => 'Kaguya Shinomiya',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/2/504723.jpg',
         'anime_id' => 19,
-        'voice_actor_id' => 39
+        'voice_actor_id' => 40
       ],
       [
         'character_name' => 'Miyuki Shirogane',
@@ -302,37 +302,37 @@ class CharacterSeeder extends Seeder
         'character_name' => 'Asuna Yuuki',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/15/262053.jpg',
         'anime_id' => 20,
-        'voice_actor_id' => 40
+        'voice_actor_id' => 41
       ],
       [
         'character_name' => 'Chitoge Kirisaki',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/7/241651.jpg',
         'anime_id' => 21,
-        'voice_actor_id' => 41
+        'voice_actor_id' => 42
       ],
       [
         'character_name' => 'Raku Ichijo',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/12/242215.jpg',
         'anime_id' => 21,
-        'voice_actor_id' => 42
+        'voice_actor_id' => 43
       ],
       [
         'character_name' => 'Kosaki Onodera',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/9/241653.jpg',
         'anime_id' => 21,
-        'voice_actor_id' => 43
+        'voice_actor_id' => 44
       ],
       [
         'character_name' => 'Marin Kitagawa',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/6/457309.jpg',
         'anime_id' => 22,
-        'voice_actor_id' => 44
+        'voice_actor_id' => 45
       ],
       [
         'character_name' => 'Wakana Gojo',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/5/472608.jpg',
         'anime_id' => 22,
-        'voice_actor_id' => 45
+        'voice_actor_id' => 46
       ],
       [
         'character_name' => 'Arima Kana',
@@ -344,19 +344,19 @@ class CharacterSeeder extends Seeder
         'character_name' => 'Aquamarine Hoshino',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/9/496455.jpg',
         'anime_id' => 23,
-        'voice_actor_id' => 46
+        'voice_actor_id' => 47
       ],
       [
         'character_name' => 'Kurokawa Akane',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/5/512681.jpg',
         'anime_id' => 23,
-        'voice_actor_id' => 47
+        'voice_actor_id' => 48
       ],
       [
         'character_name' => 'Tokuyuki Houjou',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/13/525049.jpg',
         'anime_id' => 24,
-        'voice_actor_id' => 48
+        'voice_actor_id' => 49
       ],
       [
         'character_name' => 'Yorishige Suwa',
@@ -380,37 +380,37 @@ class CharacterSeeder extends Seeder
         'character_name' => 'Lucy',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/11/486620.jpg',
         'anime_id' => 26,
-        'voice_actor_id' => 49
+        'voice_actor_id' => 50
       ],
       [
         'character_name' => 'David Martinez',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/11/483437.jpg',
         'anime_id' => 26,
-        'voice_actor_id' => 50
+        'voice_actor_id' => 51
       ],
       [
         'character_name' => 'Yuuma Kuga',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/12/325835.jpg',
         'anime_id' => 27,
-        'voice_actor_id' => 63
+        'voice_actor_id' => 61
       ],
       [
         'character_name' => 'Yuuichi Jin',
-        'character_image' => 'https://cdn.myanimelist.net/images/characters/12/325835.jpg',
+        'character_image' => 'https://cdn.myanimelist.net/images/characters/6/268547.jpg',
         'anime_id' => 27,
         'voice_actor_id' => 8
       ],
       [
         'character_name' => 'Osamu Mikumo',
-        'character_image' => 'https://cdn.myanimelist.net/images/characters/12/325835.jpg',
+        'character_image' => 'https://cdn.myanimelist.net/images/characters/16/264753.jpg',
         'anime_id' => 27,
         'voice_actor_id' => 9
       ],
       [
         'character_name' => 'Chika Amotari',
-        'character_image' => 'https://cdn.myanimelist.net/images/characters/12/325835.jpg',
+        'character_image' => 'https://cdn.myanimelist.net/images/characters/10/294718.jpg',
         'anime_id' => 27,
-        'voice_actor_id' => 64
+        'voice_actor_id' => 62
       ],
       [
         'character_name' => 'Lelouch',
@@ -552,7 +552,7 @@ class CharacterSeeder extends Seeder
       ],
       [
         'character_name' => 'Lucy Heartfilia',
-        'character_image' => 'https://cdn.myanimelist.net/images/characters/6/105543.jpg',
+        'character_image' => 'https://cdn.myanimelist.net/images/characters/7/67774.jpg',
         'anime_id' => 35,
         'voice_actor_id' => 62
       ],
