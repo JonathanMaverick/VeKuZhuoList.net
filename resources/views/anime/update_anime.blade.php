@@ -41,8 +41,8 @@
         <textarea class="form-control" id="synopsis" name="synopsis">{{ $anime->synopsis }}</textarea>
       </div>
       <div class="mb-3 text-white">
-        <label for="trailer_url">Trailer ID</label>
-        <input type="url" class="form-control" id="trailer_url" name="trailer_url" value="{{ $anime->trailer_url }}">
+        <label for="trailer_url">Trailer Url</label>
+        <input type="url" class="form-control" id="trailer_url" name="trailer_url" value="{{ "https://www.youtube.com/watch?v=" . $anime->trailer_url }}">
       </div>
       <div class="mb-3 text-white">
         <label for="anime_image">Image</label>

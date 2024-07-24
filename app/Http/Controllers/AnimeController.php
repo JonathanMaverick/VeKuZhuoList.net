@@ -57,40 +57,39 @@ class AnimeController extends Controller
 
     public function store(Request $request)
     {
+      $rules = [
+          'anime_name' => 'required|string|max:255',
+          'release_date' => 'required|date',
+          'views' => 'required|integer',
+          'mal_score' => 'required|numeric|min:0|max:10',
+          'synopsis' => 'required|string',
+          'trailer_url' => 'required|url',
+          'anime_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+          'total_episodes' => 'required|integer',
+          'studio_id' => 'required|exists:studios,id',
+          'season_id' => 'required|exists:seasons,id',
+          'genres' => 'required|array',
+          'genres.*' => 'exists:genres,id',
+      ];
 
-        $rules = [
-            'anime_name' => 'required|string|max:255',
-            'release_date' => 'required|date',
-            'views' => 'required|integer',
-            'mal_score' => 'required|numeric|min:0|max:10',
-            'synopsis' => 'required|string',
-            'trailer_url' => 'nullable|url',
-            'anime_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'total_episodes' => 'required|integer',
-            'studio_id' => 'required|exists:studios,id',
-            'season_id' => 'required|exists:seasons,id',
-            'genres' => 'required|array',
-            'genres.*' => 'exists:genres,id',
-        ];
+      $validatedData = $request->validate($rules);
 
-        $validatedData = $request->validate($rules);
+      if ($request->has('trailer_url')) {
+          $videoId = $this->extractYouTubeVideoId($request->input('trailer_url'));
+          $validatedData['trailer_url'] = $videoId;
+      }
 
-        if ($request->has('trailer_url')) {
-            $videoId = $this->extractYouTubeVideoId($request->input('trailer_url'));
-            $validatedData['trailer_url'] = $videoId;
-        }
+      if ($request->hasFile('anime_image')) {
+          $image = $request->file('anime_image');
+          $path = $image->store('anime_images', 'public');
+          $validatedData['image_url'] = $path;
+      }
 
-        if ($request->hasFile('anime_image')) {
-            $image = $request->file('anime_image');
-            $path = $image->store('anime_images', 'public');
-            $validatedData['image_url'] = $path;
-        }
+      $anime = Anime::create($validatedData);
 
-        $anime = Anime::create($validatedData);
+      $anime->genres()->attach($request->genres);
 
-        $anime->genres()->attach($request->genres);
-
-        return redirect()->route('home')->with('success', 'Anime added successfully.');
+      return redirect()->route('home')->with('success', 'Anime added successfully.');
     }
 
     private function extractYouTubeVideoId($url)
@@ -106,6 +105,45 @@ class AnimeController extends Controller
       $studios = Studio::all();
       $seasons = Season::all();
       return view('anime.update_anime', compact('anime', 'genres', 'studios', 'seasons'));
+    }
+
+    public function update(Request $request, $id)
+    {
+      $rules = [
+        'anime_name' => 'required|string|max:255',
+        'release_date' => 'required|date',
+        'views' => 'required|integer',
+        'mal_score' => 'required|numeric|min:0|max:10',
+        'synopsis' => 'required|string',
+        'trailer_url' => 'required|url',
+        'anime_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'total_episodes' => 'required|integer',
+        'studio_id' => 'required|exists:studios,id',
+        'season_id' => 'required|exists:seasons,id',
+        'genres' => 'required|array',
+        'genres.*' => 'exists:genres,id',
+      ];
+
+      $validatedData = $request->validate($rules);
+
+      if ($request->has('trailer_url')) {
+          $videoId = $this->extractYouTubeVideoId($request->input('trailer_url'));
+          $validatedData['trailer_url'] = $videoId;
+      }
+
+      $anime = Anime::findOrFail($id);
+
+      $anime->fill($validatedData);
+      if ($request->hasFile('anime_image')) {
+        $imagePath = $request->file('anime_image')->store('anime_images', 'public');
+        $anime->anime_image = $imagePath;
+      }
+
+      $anime->save();
+
+      $anime->genres()->sync($validatedData['genres']);
+
+      return redirect()->route('anime.show', $anime->id)->with('success', 'Anime updated successfully!');
     }
 }
 
