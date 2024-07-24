@@ -135,5 +135,10 @@ In addition to producing anime for domestic consumption in Japan, Toei Animation
             'studio_name' => 'Pierrot',
             'studio_logo' => 'https://ih1.redbubble.net/image.5221021303.6521/flat,750x1000,075,f.jpg'
         ]);
+
+        Studio::create([
+            'studio_name' => 'C-Station',
+            'studio_logo' => 'https://cdn.myanimelist.net/s/common/company_logos/97a95374-f91f-4fe5-8f3d-9ba18b39a0c4_600x600_i?s=9bb13f19db01535db0011a15f922de40'
+        ]);
     }
 }
