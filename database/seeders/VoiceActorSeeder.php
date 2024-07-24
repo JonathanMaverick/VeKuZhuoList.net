@@ -36,7 +36,6 @@ class VoiceActorSeeder extends Seeder
       [
         'voice_actor_name' => 'Junya Enoki',
         'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/2/62840.jpg'
-
       ],
       [
         'voice_actor_name' => 'Yuma Uchida',
@@ -68,7 +67,7 @@ class VoiceActorSeeder extends Seeder
       ],
       [
         'voice_actor_name' => 'Kikunosuke Toya',
-        'voice_actor_image' => 'https://cdn.myanimelist.net/images/characters/3/492407.jpg'
+        'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/1/72408.jpg'
       ],
       [
         'voice_actor_name' => 'Maria Naganawa',

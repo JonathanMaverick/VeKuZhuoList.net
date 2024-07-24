@@ -52,8 +52,7 @@ class AnimeController extends Controller
     $genres = Genre::all();
     $studios = Studio::all();
     $seasons = Season::all();
-    $genres = Genre::all();
-    return view('anime.add_anime', compact('genres', 'studios', 'seasons', 'genres'));
+    return view('anime.add_anime', compact('genres', 'studios', 'seasons'));
   }
 
     public function store(Request $request)
@@ -98,6 +97,15 @@ class AnimeController extends Controller
     {
         parse_str(parse_url($url, PHP_URL_QUERY), $query);
         return $query['v'] ?? null;
+    }
+
+    public function update_anime($id)
+    {
+      $anime = Anime::find($id);
+      $genres = Genre::all();
+      $studios = Studio::all();
+      $seasons = Season::all();
+      return view('anime.update_anime', compact('anime', 'genres', 'studios', 'seasons'));
     }
 }
 
