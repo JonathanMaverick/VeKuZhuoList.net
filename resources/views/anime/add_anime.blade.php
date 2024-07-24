@@ -98,47 +98,91 @@
             </div>
           @endforeach
         </div>
+      </div>
 
-        <div class="character-container">
-
-        </div>
-
-        {{-- Character Section --}}
-        <div class="mb-3 text-white">
-          <label for="character">Characters</label>
-          <div id="characters-container">
+      {{-- Character Section --}}
+      <div class="mb-3 text-white">
+        <label for="character">Characters</label>
+        <div id="characters-container">
+          @php
+            $oldCharacters = old('characters', []);
+          @endphp
+          @foreach ($oldCharacters as $index => $character)
             <div class="character-entry">
-              <div class="mb-3">
-                <label for="character_image_1" class="form-label">Character Image URL</label>
-                <input type="text" id="character_image_1" name="characters[0][image_url]" class="form-control">
-              </div>
-              <div class="mb-3">
-                <label for="character_name_1" class="form-label">Character Name</label>
-                <input type="text" id="character_name_1" name="characters[0][name]" class="form-control">
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Voice Actors</label>
-                <div class="flex flex-col">
-                  @foreach ($voice_actors as $voiceActor)
-                    <div class="flex items-center mb-2">
-                      <input type="radio" id="voice_actor_{{ $voiceActor->id }}_1" name="characters[0][voice_actor]"
-                        value="{{ $voiceActor->id }}" class="form-radio h-4 w-4">
-                      <label for="voice_actor_{{ $voiceActor->id }}_1"
-                        class="ml-2">{{ $voiceActor->voice_actor_name }}</label>
-                    </div>
-                  @endforeach
+              <div class="flex flex-row justify-evenly">
+                <div class="mb-3">
+                  <label for="character_image_{{ $index }}" class="form-label">Character Image URL</label>
+                  <input type="text" id="character_image_{{ $index }}"
+                    name="characters[{{ $index }}][image_url]" class="form-control"
+                    value="{{ $character['image_url'] ?? '' }}">
+                </div>
+                <div class="mb-3">
+                  <label for="character_name_{{ $index }}" class="form-label">Character Name</label>
+                  <input type="text" id="character_name_{{ $index }}"
+                    name="characters[{{ $index }}][name]" class="form-control"
+                    value="{{ $character['name'] ?? '' }}">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Voice Actors</label>
+                  <div class="flex flex-col h-2">
+                    <select id="voice_actor_id_{{ $index }}"
+                      name="characters[{{ $index }}][voice_actor]" class="form-select bg-white">
+                      <option value="" disabled {{ isset($character['voice_actor']) ? '' : 'selected' }}>Select a
+                        Voice Actor</option>
+                      @foreach ($voice_actors as $voiceActor)
+                        <option value="{{ $voiceActor->id }}"
+                          {{ isset($character['voice_actor']) && $character['voice_actor'] == $voiceActor->id ? 'selected' : '' }}>
+                          {{ $voiceActor->voice_actor_name }}
+                        </option>
+                      @endforeach
+                    </select>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <button type="button" id="add-character" class="btn btn-secondary">Add Character</button>
+          @endforeach
         </div>
-
+        <button type="button" id="add-character" class="btn btn-secondary">Add Character</button>
       </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
   </div>
 
-@endsectio
-n
+  <script>
+    let characterIndex = 1;
+
+    document.getElementById('add-character').addEventListener('click', function() {
+      characterIndex++;
+
+      const container = document.createElement('div');
+      container.classList.add('character-entry');
+
+      container.innerHTML = `
+        <div class="flex flex-row justify-evenly">
+      <div class="mb-3">
+        <label for="character_image_${characterIndex}" class="form-label">Character Image URL</label>
+        <input type="text" id="character_image_${characterIndex}" name="characters[${characterIndex - 1}][image_url]" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="character_name_${characterIndex}" class="form-label">Character Name</label>
+        <input type="text" id="character_name_${characterIndex}" name="characters[${characterIndex - 1}][name]" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Voice Actors</label>
+        <div class="flex flex-col h-2">
+          <select id="voice_actor_id_${characterIndex}" name="characters[${characterIndex - 1}][voice_actor]" class="form-select bg-white">
+            <option value="" disabled selected>Select a Voice Actor</option>
+            @foreach ($voice_actors as $voiceActor)
+              <option value="{{ $voiceActor->id }}">{{ $voiceActor->voice_actor_name }}</option>
+            @endforeach
+          </select>
+        </div>
+      </div>
+    </div>
+    `;
+
+      document.getElementById('characters-container').appendChild(container);
+    });
+  </script>
+
+@endsection

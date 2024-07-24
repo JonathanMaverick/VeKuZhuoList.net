@@ -251,7 +251,7 @@ class VoiceActorSeeder extends Seeder
       ],
       [
         'voice_actor_name' => 'Chiaki Kobayashi',
-        'voice_actor_image' => 'https://cdn.myanimelist.net/images/characters/2/523292.jpg'
+        'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/2/66505.jpg'
       ],
       [
         'voice_actor_name' => 'Ikumi Hasegawa',
@@ -296,6 +296,18 @@ class VoiceActorSeeder extends Seeder
       [
         'voice_actor_name' => 'Momoka Terasawa',
         'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/1/79678.jpg'
+      ],
+      [
+        'voice_actor_name' => 'Tatsuya Kakihara',
+        'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/3/60808.jpg'
+      ],
+      [
+        'voice_actor_name' => 'Sayaka Ohara',
+        'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/1/54698.jpg'
+      ],
+      [
+        'voice_actor_name' => 'Sayaka Hirano',
+        'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/3/78608.jpg'
       ]
     ];
 

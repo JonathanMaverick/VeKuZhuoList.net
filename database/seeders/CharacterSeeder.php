@@ -168,7 +168,7 @@ class CharacterSeeder extends Seeder
       ],
       [
         'character_name' => 'Shiro',
-        'character_image' => 'https://cdn.myanimelist.net/images/characters/12/274347.jpg',
+        'character_image' => 'https://cdn.myanimelist.net/images/characters/16/246723.jpg',
         'anime_id' => 10,
         'voice_actor_id' => 25
       ],
@@ -180,7 +180,7 @@ class CharacterSeeder extends Seeder
       ],
       [
         'character_name' => 'Nezuko Kamado',
-        'character_image' => 'https://cdn.myanimelist.net/images/characters/15/384829.jpg',
+        'character_image' => 'https://cdn.myanimelist.net/images/characters/2/378254.jpg?_gl=1*vgye17*_gcl_au*MTAzMjQxMTM0LjE3MTQ5MTUyNzg.*_ga*MTY4OTYxMDYxMS4xNzE0OTE1Mjc2*_ga_26FEP9527K*MTcyMTgzNjAxOS4xMS4xLjE3MjE4MzczMTQuNDAuMC4w',
         'anime_id' => 11,
         'voice_actor_id' => 27
       ],
@@ -276,7 +276,7 @@ class CharacterSeeder extends Seeder
       ],
       [
         'character_name' => 'Izuku Midoriya',
-        'character_image' => 'https://cdn.myanimelist.net/images/characters/12/332526.jpg',
+        'character_image' => 'https://cdn.myanimelist.net/images/characters/7/299404.jpg',
         'anime_id' => 18,
         'voice_actor_id' => 39
       ],
@@ -371,8 +371,8 @@ class CharacterSeeder extends Seeder
         'voice_actor_id' => 43
       ],
       [
-        'character_name' => 'Kyoko Hori',
-        'character_image' => 'https://cdn.myanimelist.net/images/characters/6/507111.jpg',
+        'character_name' => 'Kyouko Hori',
+        'character_image' => 'https://cdn.myanimelist.net/images/characters/16/318188.jpg',
         'anime_id' => 25,
         'voice_actor_id' => 41
       ],
@@ -440,29 +440,29 @@ class CharacterSeeder extends Seeder
         'character_name' => 'Alisa Mikhaliovna Kujou',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/5/536830.jpg',
         'anime_id' => 29,
-        'voice_actor_id' => 51
+        'voice_actor_id' => 52
       ],
       [
         'character_name' => 'Masachika Kuze',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/4/536831.jpg',
         'anime_id' => 29,
-        'voice_actor_id' => 52
+        'voice_actor_id' => 53
       ],
       [
         'character_name' => 'Josepth Joestar',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/6/252863.jpg',
         'anime_id' => 30,
-        'voice_actor_id' => 53
+        'voice_actor_id' => 54
       ],
       [
         'character_name' => 'Dio Brando',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/10/252875.jpg',
         'anime_id' => 30,
-        'voice_actor_id' => 54
+        'voice_actor_id' => 55
       ],
       [
         'character_name' => 'YoRHa 2-gou B-gata',
-        'character_image' => 'https://cdn.myanimelist.net/images/voiceactors/1/63375.jpg',
+        'character_image' => 'https://cdn.myanimelist.net/images/characters/6/489088.jpg',
         'anime_id' => 31,
         'voice_actor_id' => 10
       ],
@@ -500,13 +500,13 @@ class CharacterSeeder extends Seeder
         'character_name' => 'Haku',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/16/480331.jpg',
         'anime_id' => 33,
-        'voice_actor_id' => 55
+        'voice_actor_id' => 56
       ],
       [
         'character_name' => 'Chihiro Ogino',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/7/434512.jpg',
         'anime_id' => 33,
-        'voice_actor_id' => 56
+        'voice_actor_id' => 57
       ],
       [
         'character_name' => 'Frieren',
@@ -516,15 +516,15 @@ class CharacterSeeder extends Seeder
       ],
       [
         'character_name' => 'Fern',
-        'character_image' => 'https://cdn.myanimelist.net/images/characters/7/525105.jpg',
+        'character_image' => 'https://cdn.myanimelist.net/images/characters/13/519083.jpg',
         'anime_id' => 34,
-        'voice_actor_id' => 57
+        'voice_actor_id' => 58
       ],
       [
         'character_name' => 'Stark',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/2/523292.jpg',
         'anime_id' => 34,
-        'voice_actor_id' => 58
+        'voice_actor_id' => 59
       ],
       [
         'character_name' => 'Himmel',
@@ -536,25 +536,25 @@ class CharacterSeeder extends Seeder
         'character_name' => 'Ubel',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/9/543072.jpg',
         'anime_id' => 34,
-        'voice_actor_id' => 59
+        'voice_actor_id' => 60
       ],
       [
         'character_name' => 'Natsu Dragneel',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/15/105542.jpg',
         'anime_id' => 35,
-        'voice_actor_id' => 60
+        'voice_actor_id' => 71
       ],
       [
         'character_name' => 'Erza Scarlet',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/12/492254.jpg',
         'anime_id' => 35,
-        'voice_actor_id' => 61
+        'voice_actor_id' => 72
       ],
       [
         'character_name' => 'Lucy Heartfilia',
         'character_image' => 'https://cdn.myanimelist.net/images/characters/7/67774.jpg',
         'anime_id' => 35,
-        'voice_actor_id' => 62
+        'voice_actor_id' => 73
       ],
       [
         'character_name' => 'Gray Fullbuster',

@@ -10,6 +10,9 @@ class Character extends Model
 
   protected $fillable = [
     'character_name',
+    'character_image',
+    'anime_id',
+    'voice_actor_id',
   ];
 
   public function animes()
