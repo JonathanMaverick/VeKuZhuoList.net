@@ -25,14 +25,14 @@
     <div class="information-section mb-[10px]">
       <div class="title text-white border-b-[1px] border-borderLight font-bold text-[16px] my-[10px]">Information</div>
       <div class="content w-full flex flex-col text-white">
-        <p>Name: {{ $anime->anime_name }}</p>
-        <p>Release date: {{ $anime->release_date }}</p>
-        <p>Episodes: {{ $anime->total_episodes }}</p>
-        <p>Studio: <a class="text-customBlueLight hover:underline"
+        <p><b class="text-gray-300">Name: </b>{{ $anime->anime_name }}</p>
+        <p><b class="text-gray-300">Relesae date: </b>{{ $anime->release_date }}</p>
+        <p><b class="text-gray-300">Episodes: </b>{{ $anime->total_episodes }}</p>
+        <p><b class="text-gray-300">Studios: </b><a class="text-customBlueLight hover:underline"
             href="{{ route('studio.show', $anime->studio->id) }}">
             {{ $anime->studio->studio_name }}
           </a></p>
-        <p>Genres:
+        <p><b class="text-gray-300">Genres: </b>
           @foreach ($anime->genres as $genre)
           <a class="text-customBlueLight hover:underline" href="{{ route('genre.show', $genre->id) }}"
             class="text-blue-500">{{ $genre->genre_name }}</a>@if (!$loop->last),@endif
@@ -43,8 +43,8 @@
     <div class="statistic-section mb-[10px]">
       <div class="title text-white border-b-[1px] border-borderLight font-bold text-[16px] my-[10px]">Statistic</div>
       <div class="content w-full flex flex-col text-white">
-        <p>Score: {{ $anime->mal_score }}</p>
-        <p>Views: {{ number_format($anime->views) }}</p>
+        <p><b class="text-gray-300">Scores: {{ $anime->mal_score }}</p>
+        <p><b class="text-gray-300">Views: {{ number_format($anime->views) }}</p>
       </div>
     </div>
   </div>
