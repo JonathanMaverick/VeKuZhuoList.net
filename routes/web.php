@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [AnimeController::class, 'index'])->name('home');
 
 Route::prefix('anime')->group(function () {
-    Route::get('/{id}', [AnimeController::class, 'show'])->name('anime.show');
+    Route::get('/detail/{id}', [AnimeController::class, 'show'])->name('anime.show');
     Route::get('/add', [AnimeController::class, 'add_anime'])->name('anime.add');
     Route::post('/', [AnimeController::class, 'store'])->name('anime.store');
     Route::get('/update/{id}', [AnimeController::class, 'update_anime'])->name('anime.update');
@@ -44,9 +44,8 @@ Route::prefix('genre')->group(function () {
     Route::get('/{id}', [GenreController::class, 'show'])->name('genre.show');
 });
 
-Route::prefix('season')->group(function(){
+Route::prefix('season')->group(function () {
     Route::get('/{id}', [SeasonController::class, 'show'])->name('season.show');
 });
 
 Route::get('/search', [SearchController::class, 'search'])->name('search');
-
