@@ -11,7 +11,7 @@
 
 <div class="container bg-customBlack max-w-full border-[1px] border-border px-[15px] py-[10px] flex w-full">
     <a href="{{ route('anime.update', $anime->id) }}">
-        <button type="button">
+        <button type="button" class="text-white">
             Update Anime
         </button>
     </a>
@@ -42,6 +42,11 @@
           <a class="text-customBlueLight hover:underline" href="{{ route('genre.show', $genre->id) }}"
             class="text-blue-500">{{ $genre->genre_name }}</a>@if (!$loop->last),@endif
           @endforeach
+        </p>
+        <p><b class="text-gray-300:">Season: </b>
+            <a class="text-customBlueLight hover:underline" href="{{route('season.show', $anime->season->id)}}">
+              {{$anime->season->season_name}}
+            </a>
         </p>
       </div>
     </div>

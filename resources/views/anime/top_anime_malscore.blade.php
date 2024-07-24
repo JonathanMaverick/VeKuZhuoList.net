@@ -3,12 +3,11 @@
 @section('title', 'Top Anime Mal Score')
 
 @section('content')
-<div class="title-section text-white bg-grayMid px-[12px] py-[5px] text-[18px] border-b-[1px] border-borderLight">
-  Top Anime
+<div class="title-section text-white bg-grayMid px-[12px] py-[12px] text-[18px] border-b-[1px] border-borderLight">
+  Top Scored Anime
 </div>
 
 <div class="container bg-customBlack max-w-full border-[1px] border-border px-[15px] py-[10px] flex w-full flex-col">
-  <div class="title text-white text-[18px] font-bold">Top Rated Anime</div>
   <table class="text-white border-collapse">
     <thead class="bg-grayLight text-center h-[32px]">
       <tr>

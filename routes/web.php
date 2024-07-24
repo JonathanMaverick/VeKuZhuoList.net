@@ -4,6 +4,7 @@ use App\Http\Controllers\AnimeController;
 use App\Http\Controllers\CharacterController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\SeasonController;
 use App\Http\Controllers\StudioController;
 use App\Http\Controllers\VoiceActorController;
 use Illuminate\Support\Facades\Route;
@@ -41,6 +42,10 @@ Route::prefix('voice_actor')->group(function () {
 
 Route::prefix('genre')->group(function () {
     Route::get('/{id}', [GenreController::class, 'show'])->name('genre.show');
+});
+
+Route::prefix('season')->group(function(){
+    Route::get('/{id}', [SeasonController::class, 'show'])->name('season.show');
 });
 
 Route::get('/search', [SearchController::class, 'search'])->name('search');
