@@ -98,7 +98,7 @@
         </div>
       </div>
       <div class="top-rated-anime-section">
-        <div class="title bg-grayLight p-2 flex justify-between">
+        <div class="title bg-grayLight p-2 flex justify-between items-center">
           <h2 class="text-white items-center">Top Rated Anime</h2>
           <a class="text-customBlueLight hover:underline" href="{{ route('anime.top_malscore') }}">More</a>
         </div>

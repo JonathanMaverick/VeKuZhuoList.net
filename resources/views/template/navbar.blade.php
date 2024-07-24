@@ -21,10 +21,10 @@
           <a href="{{ route('home') }}" class="w-2/12 h-auto">
             <img src="{{ asset('/image/VeKuZhuoList.png') }}" alt="">
           </a>
-          <div class="login-register-button flex justify-between center w-3/12 gap-2">
+          {{-- <div class="login-register-button flex justify-between center w-3/12 gap-2">
             <a class="w-1/2 flex justify-center bg-grayLight font-bold text-white">Login</a>
             <a class="w-1/2 flex justify-center bg-customBlue font-bold text-white">Sign Up</a>
-          </div>
+          </div> --}}
         </div>
         <div class="navbar-bottom bg-customBlue w-full flex flex-row justify-between h-[40px]">
           <div class="dropdown-section flex flex-row text-white font-bold">

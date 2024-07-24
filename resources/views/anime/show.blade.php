@@ -10,11 +10,11 @@
 </div>
 
 <div class="container bg-customBlack max-w-full border-[1px] border-border px-[15px] py-[10px] flex w-full">
-    <a href="{{ route('anime.update', $anime->id) }}">
+    {{-- <a href="{{ route('anime.update', $anime->id) }}">
         <button type="button" class="text-white">
             Update Anime
         </button>
-    </a>
+    </a> --}}
   <div class="left-section pr-[5px] h-full flex flex-col max-w-[250px]">
     <img src="{{ Storage::url($anime->image_url) }}" alt="{{ $anime->anime_name }}" class="w-[250px] mb-[10px]">
     <div class="container flex p-[15px] gap-[10px] justify-between bg-grayDark border-[1px] border-border ">
