@@ -308,6 +308,10 @@ class VoiceActorSeeder extends Seeder
       [
         'voice_actor_name' => 'Sayaka Hirano',
         'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/3/78608.jpg'
+      ],
+      [
+        'voice_actor_name' => 'Ryouta Suzuki',
+        'voice_actor_image' => 'https://cdn.myanimelist.net/images/voiceactors/2/64211.jpg'
       ]
     ];
 

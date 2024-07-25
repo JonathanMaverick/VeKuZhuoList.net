@@ -108,7 +108,7 @@
             $oldCharacters = old('characters', []);
           @endphp
           @foreach ($oldCharacters as $index => $character)
-            <div class="character-entry">
+            <div class="character-entry" id="character-entry-{{$index}}">
               <div class="flex flex-row justify-evenly">
                 <div class="mb-3">
                   <label for="character_image_{{ $index }}" class="form-label">Character Image URL</label>
@@ -138,6 +138,10 @@
                     </select>
                   </div>
                 </div>
+                <div class="mb-3">
+                  <button type="button" class="btn btn-danger remove-character"
+                    data-index="{{ $index }}">Remove</button>
+                </div>
               </div>
             </div>
           @endforeach
@@ -156,6 +160,7 @@
 
       const container = document.createElement('div');
       container.classList.add('character-entry');
+      container.id = `character-entry-${characterIndex}`;
 
       container.innerHTML = `
         <div class="flex flex-row justify-evenly">
@@ -178,11 +183,23 @@
           </select>
         </div>
       </div>
+        <div class="mb-3">
+            <button type="button" class="btn btn-danger remove-character" data-index="${characterIndex}">Remove</button>
+        </div>
     </div>
     `;
 
-      document.getElementById('characters-container').appendChild(container);
+        document.getElementById('characters-container').appendChild(container);
     });
+
+    document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('remove-character')) {
+        const index = event.target.getAttribute('data-index');
+        document.getElementById(`character-entry-${index}`).remove();
+    }});
+
   </script>
+
+
 
 @endsection

@@ -25,6 +25,11 @@ class AnimeController extends Controller
     public function show($id)
     {
         $anime = Anime::find($id);
+
+        if ($anime == null) {
+            return view('errors.404');
+        }
+
         return view('anime.show', compact('anime'));
     }
 
@@ -124,7 +129,8 @@ class AnimeController extends Controller
         $genres = Genre::all();
         $studios = Studio::all();
         $seasons = Season::all();
-        return view('anime.update_anime', compact('anime', 'genres', 'studios', 'seasons'));
+        $voice_actors = VoiceActor::all();
+        return view('anime.update_anime', compact('anime', 'genres', 'studios', 'seasons', 'voice_actors'));
     }
 
     public function update(Request $request, $id)
@@ -142,6 +148,11 @@ class AnimeController extends Controller
             'season_id' => 'required|exists:seasons,id',
             'genres' => 'required|array',
             'genres.*' => 'exists:genres,id',
+            'characters' => 'required|array|min:1',
+            'characters.*.id' => 'nullable|exists:characters,id',
+            'characters.*.character_image' => 'required|url',
+            'characters.*.character_name' => 'required|string|max:255',
+            'characters.*.voice_actor' => 'required|exists:voice_actors,id',
         ];
 
         $validatedData = $request->validate($rules);
@@ -162,6 +173,21 @@ class AnimeController extends Controller
         $anime->save();
 
         $anime->genres()->sync($validatedData['genres']);
+
+        $charactersData = $validatedData['characters'] ?? [];
+        $characterIds = array_filter(array_column($charactersData, 'id'));
+        $anime->characters()->whereNotIn('id', $characterIds)->delete();
+
+        foreach ($charactersData as $index => $characterData) {
+            $character = $anime->characters()->updateOrCreate(
+                ['id' => $characterData['id'] ?? null],
+                [
+                    'character_image' => $characterData['character_image'] ?? null,
+                    'character_name' => $characterData['character_name'],
+                    'voice_actor_id' => $characterData['voice_actor'] ?? null,
+                ]
+            );
+        }
 
         return redirect()->route('anime.show', $anime->id)->with('success', 'Anime updated successfully!');
     }
