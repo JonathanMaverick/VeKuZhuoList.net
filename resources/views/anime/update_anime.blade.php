@@ -22,7 +22,6 @@ Update Anime - {{ $anime->anime_name }}
 <div
   class="container bg-customBlack max-w-full border-[1px] border-border px-[15px] py-[10px] flex w-full flex-col gap-[10px]">
 
-
   <div class="container flex gap-[20px] p-0">
     <div class="left flex-1 flex flex-col gap-[10px]">
       <div class="text-lightFont flex flex-col">
