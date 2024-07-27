@@ -40,7 +40,7 @@
             </div>
           </div>
         </td>
-        <td class="text-center border-[1px] border-border">{{ $anime->views }}</td>
+        <td class="text-center border-[1px] border-border">{{ number_format($anime->views) }}</td>
       </tr>
       @endforeach
     </tbody>

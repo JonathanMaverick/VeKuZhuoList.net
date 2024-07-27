@@ -13,8 +13,8 @@
   class="container bg-customBlack max-w-full border-[1px] border-border px-[15px] py-[10px] w-full grid grid-cols-3 gap-[20px]">
   @foreach ($genre->animes as $anime)
   <div class="anime-item flex flex-col border-[1px] border-border">
-    <div class="title-section flex justify-center py-[15px]">
-      <a class="text-customBlueLight hover:underline"
+    <div class="title-section flex justify-center h-[60px] items-center">
+      <a class="text-customBlueLight hover:underline text-center"
         href="{{ route('anime.show', $anime->id) }}">{{$anime->anime_name}}</a>
     </div>
     <div class="sub-title-section flex text-lightFont text-[12px] bg-grayDark py-[5px]">

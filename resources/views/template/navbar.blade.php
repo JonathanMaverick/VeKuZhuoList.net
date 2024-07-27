@@ -93,6 +93,11 @@
       @yield('content')
     </div>
 
+    {{-- Footer --}}
+    <div class="footer bg-grayLight">
+
+    </div>
+
   </div>
 </body>
 
