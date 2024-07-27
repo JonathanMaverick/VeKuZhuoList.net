@@ -14,10 +14,14 @@
     .dropdown:hover .dropdown-content {
       display: flex
     }
+
+    .instagram:hover .tag {
+      display: block
+    }
   </style>
 </head>
 
-<body class="bg-customBlack flex justify-center">
+<body class="bg-customBlack flex justify-center items-center flex-col">
   <div class="main flex flex-col">
 
     {{-- Navigation Bar --}}
@@ -92,12 +96,32 @@
     <div class="content">
       @yield('content')
     </div>
-
-    {{-- Footer --}}
-    <div class="footer bg-grayLight">
-
+  </div>
+  {{-- Footer --}}
+  <div class="footer bg-grayMid w-full mt-[30px] p-[50px] text-lightFont flex flex-col items-center justify-center">
+    <div class="top flex justify-center items-center gap-[20px] pb-[15px]">
+      <p class="text-[11px]">Follow Us</p>
+      <div class="link flex gap-[10px]">
+        <a target="_blank" class="saturate-0 hover:saturate-100" href="https://www.instagram.com/jmaverick_/">
+          <div class="instagram flex flex-col items-center gap-[2px] relative">
+            <img class="w-[30px]" src="{{ Storage::url('./instagram_logo.webp')}}" alt="">
+            <p class="tag bg-grayDark absolute text-[10px] bottom-full p-[5px] rounded-md hidden">@jmaverick_</p>
+          </div>
+        </a>
+        <a target="_blank" class="saturate-0 hover:saturate-100" href="https://www.instagram.com/hendrazhuoh/">
+          <div class="instagram flex flex-col items-center gap-[2px] relative">
+            <img class="w-[30px]" src="{{ Storage::url('./instagram_logo.webp')}}" alt="">
+            <p class="tag bg-grayDark absolute text-[10px] bottom-full p-[5px] rounded-md hidden">@hendrazhuoh</p>
+          </div>
+        </a>
+      </div>
     </div>
 
+    <div class="bottom text-center pt-[15px] border-t-[1px] border-borderLight">
+      <p class="text-[13px]">MyAnimeList.net is a property of MyAnimeList Co.,Ltd. ©2024 All Rights Reserved.</p>
+      <p class="text-[10px]">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service
+        apply.</p>
+    </div>
   </div>
 </body>
 
