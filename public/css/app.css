@@ -1,3 +1,27 @@
-.main{
+.main {
     width: 1050px;
+    min-height: 40vw;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #201c1c;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a3a3a3;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+::-webkit-scrollbar-corner {
+    background: #000000;
 }
