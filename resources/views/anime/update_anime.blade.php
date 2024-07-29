@@ -81,7 +81,7 @@ Update Anime - {{ $anime->anime_name }}
       <div class="text-lightFont flex flex-col">
         <label for="trailer_url" class="form-label m-0">Trailer URL</label>
         <input class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm" type="text" class="form-control"
-          id="trailer_url" name="trailer_url" value="{{ $anime->trailer_url }}">
+          id="trailer_url" name="trailer_url" value="{{ 'https://www.youtube.com/watch?v=' . $anime->trailer_url }}">
       </div>
       <div class="text-lightFont flex flex-col">
         <label for="anime_image">Image</label>
