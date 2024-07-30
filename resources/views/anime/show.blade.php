@@ -31,7 +31,7 @@
         <div class="title text-white border-b-[1px] border-borderLight font-bold text-[16px] my-[10px]">Information</div>
         <div class="content w-full flex flex-col text-white">
           <p><b class="text-gray-300">Name: </b>{{ $anime->anime_name }}</p>
-          <p><b class="text-gray-300">Relesae date: </b>{{ $anime->release_date }}</p>
+          <p><b class="text-gray-300">Release date: </b>{{ $anime->release_date }}</p>
           <p><b class="text-gray-300">Episodes: </b>{{ $anime->total_episodes }}</p>
           <p><b class="text-gray-300">Studios: </b><a class="text-customBlueLight hover:underline"
               href="{{ route('studio.show', $anime->studio->id) }}">
@@ -56,14 +56,14 @@
       <div class="statistic-section mb-[10px]">
         <div class="title text-white border-b-[1px] border-borderLight font-bold text-[16px] my-[10px]">Statistic</div>
         <div class="content w-full flex flex-col text-white">
-          <p><b class="text-gray-300">Scores: {{ $anime->mal_score }}</p>
-          <p><b class="text-gray-300">Views: {{ number_format($anime->views) }}</p>
+          <p><b class="text-gray-300">Scores: {{ $anime->mal_score }}</b></p>
+          <p><b class="text-gray-300">Views: {{ number_format($anime->views) }}</b></p>
         </div>
       </div>
     </div>
     <div class="right-section flex-1 flex flex-col gap-[15px] pl-[5px] border-l-[1px] border-border">
       <div class="synopsis-section">
-        <div class="title text-white border-b-[1px] border-borderLight font-bold text-[16px] mb-[10px]">Synopsis</div>
+        <div class="title text-white border-b-[1px] border-borderLight font-bold text-[16px] mb-[10px] w-full">Synopsis</div>
         <div class="content text-gray-300">
           {{ $anime->synopsis }}
         </div>
