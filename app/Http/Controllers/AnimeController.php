@@ -10,6 +10,8 @@ use App\Models\Studio;
 use App\Models\VoiceActor;
 use Illuminate\Http\Request;
 
+use function PHPUnit\Framework\isEmpty;
+
 class AnimeController extends Controller
 {
     public function index()
@@ -71,7 +73,16 @@ class AnimeController extends Controller
             'views' => 'required|integer',
             'mal_score' => 'required|numeric|min:0|max:10',
             'synopsis' => 'required|string',
-            'trailer_url' => 'required|url',
+            'trailer_url' => [
+                'required',
+                'url',
+                function ($attribute, $value, $fail) {
+                    $videoId = $this->extractYouTubeVideoId($value);
+                    if (empty($videoId) || !is_string($videoId)) {
+                        $fail('Invalid YouTube URL.');
+                    }
+                },
+            ],
             'anime_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'total_episodes' => 'required|integer',
             'studio_id' => 'required|exists:studios,id',
@@ -141,7 +152,16 @@ class AnimeController extends Controller
             'views' => 'required|integer',
             'mal_score' => 'required|numeric|min:0|max:10',
             'synopsis' => 'required|string',
-            'trailer_url' => 'required|url',
+            'trailer_url' => [
+                'required',
+                'url',
+                function ($attribute, $value, $fail) {
+                    $videoId = $this->extractYouTubeVideoId($value);
+                    if (empty($videoId) || !is_string($videoId)) {
+                        $fail('Invalid YouTube URL.');
+                    }
+                },
+            ],
             'anime_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'total_episodes' => 'required|integer',
             'studio_id' => 'required|exists:studios,id',
@@ -159,6 +179,9 @@ class AnimeController extends Controller
 
         if ($request->has('trailer_url')) {
             $videoId = $this->extractYouTubeVideoId($request->input('trailer_url'));
+            if (isEmpty($videoId) || !is_string($videoId)) {
+                return redirect()->back()->with('error', 'Invalid Youtube URL');
+            }
             $validatedData['trailer_url'] = $videoId;
         }
 
