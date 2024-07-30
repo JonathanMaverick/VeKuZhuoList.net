@@ -70,7 +70,7 @@
         <div class="right flex-1 flex flex-col gap-[10px]">
           <div class="text-lightFont flex flex-col">
             <label for="release_date" class="form-label m-0">Release Date</label>
-            <input class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm" type="text" class="form-control"
+            <input class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm" type="date" class="form-control"
               id="release_date" name="release_date" value="{{ $anime->release_date }}">
           </div>
           <div class="text-lightFont flex flex-col">

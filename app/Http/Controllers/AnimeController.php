@@ -70,7 +70,7 @@ class AnimeController extends Controller
         $rules = [
             'anime_name' => 'required|string|max:255',
             'release_date' => 'required|date',
-            'views' => 'required|integer',
+            'views' => 'required|integer|min:1',
             'mal_score' => 'required|numeric|min:0|max:10',
             'synopsis' => 'required|string',
             'trailer_url' => [
@@ -84,10 +84,10 @@ class AnimeController extends Controller
                 },
             ],
             'anime_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'total_episodes' => 'required|integer',
+            'total_episodes' => 'required|integer|min:1',
             'studio_id' => 'required|exists:studios,id',
             'season_id' => 'required|exists:seasons,id',
-            'genres' => 'required|array',
+            'genres' => 'required|array|max:4|min:1',
             'genres.*' => 'exists:genres,id',
             'characters' => 'required|array|min:1',
             'characters.*.image_url' => 'required|url',
@@ -163,10 +163,10 @@ class AnimeController extends Controller
                 },
             ],
             'anime_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'total_episodes' => 'required|integer',
+            'total_episodes' => 'required|integer|min:1',
             'studio_id' => 'required|exists:studios,id',
             'season_id' => 'required|exists:seasons,id',
-            'genres' => 'required|array',
+            'genres' => 'required|array|max:4|min:1',
             'genres.*' => 'exists:genres,id',
             'characters' => 'required|array|min:1',
             'characters.*.id' => 'nullable|exists:characters,id',
@@ -179,9 +179,6 @@ class AnimeController extends Controller
 
         if ($request->has('trailer_url')) {
             $videoId = $this->extractYouTubeVideoId($request->input('trailer_url'));
-            if (isEmpty($videoId) || !is_string($videoId)) {
-                return redirect()->back()->with('error', 'Invalid Youtube URL');
-            }
             $validatedData['trailer_url'] = $videoId;
         }
 
@@ -211,6 +208,7 @@ class AnimeController extends Controller
                 ]
             );
         }
+
 
         return redirect()->route('anime.show', $anime->id)->with('success', 'Anime updated successfully!');
     }
