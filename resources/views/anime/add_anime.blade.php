@@ -70,13 +70,13 @@
         <div class="right flex-1 flex flex-col gap-[10px]">
           <div class="text-lightFont flex flex-col">
             <label for="release_date" class="form-label m-0">Release Date</label>
-            <input class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm" type="text" class="form-control"
+            <input class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm" type="date" class="form-control"
               id="release_date" name="release_date" value="{{ old('release_date') }}">
           </div>
           <div class="text-lightFont flex flex-col">
             <label for="mal_score" class="form-label m-0">MAL Score</label>
             <input class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm" type="number" class="form-control"
-              id="mal_score" name="mal_score" value="{{ old('mal_score') }}">
+              id="mal_score" step="0.01" name="mal_score" value="{{ old('mal_score') }}">
           </div>
           <div class="text-lightFont flex flex-col">
             <label for="trailer_url" class="form-label m-0">Trailer URL</label>
@@ -123,16 +123,16 @@
                   <div class="flex-1">
                     <label for="character_image_{{ $index }}" class="form-label m-0">Character Image URL</label>
                     <input type="text" id="character_image_{{ $index }}"
-                      name="characters[{{ $index }}][character_image]"
+                      name="characters[{{ $index }}][image_url]"
                       class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm w-full"
-                      value="{{ $character['character_image'] ?? '' }}">
+                      value="{{ $character['image_url'] ?? '' }}">
                   </div>
                   <div class="flex-1">
                     <label for="character_name_{{ $index }}" class="form-label m-0">Character Name</label>
                     <input type="text" id="character_name_{{ $index }}"
-                      name="characters[{{ $index }}][character_name]"
+                      name="characters[{{ $index }}][name]"
                       class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm w-full"
-                      value="{{ $character['character_name'] ?? '' }}">
+                      value="{{ $character['name'] ?? '' }}">
                   </div>
                   <div class="flex-1">
                     <label class="form-label m-0">Voice Actors</label>
@@ -199,12 +199,12 @@
       <div class="flex flex-row gap-[20px]">
         <div class="flex-1">
           <label for="character_image_${characterIndex}" class="form-label m-0">Character Image URL</label>
-          <input type="text" id="character_image_${characterIndex}" name="characters[${characterIndex - 1}][character_image]"
+          <input type="text" id="character_image_${characterIndex}" name="characters[${characterIndex - 1}][image_url]"
             class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm w-full">
         </div>
         <div class="flex-1">
           <label for="character_name_${characterIndex}" class="form-label m-0">Character Name</label>
-          <input type="text" id="character_name_${characterIndex}" name="characters[${characterIndex - 1}][character_name]"
+          <input type="text" id="character_name_${characterIndex}" name="characters[${characterIndex - 1}][name]"
             class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm w-full">
         </div>
         <div class="flex-1">

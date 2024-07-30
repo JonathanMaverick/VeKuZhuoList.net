@@ -76,7 +76,7 @@
           <div class="text-lightFont flex flex-col">
             <label for="mal_score" class="form-label m-0">MAL Score</label>
             <input class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm" type="number" class="form-control"
-              id="mal_score" name="mal_score" value="{{ $anime->mal_score }}">
+              id="mal_score" step="0.01" name="mal_score" value="{{ $anime->mal_score }}">
           </div>
           <div class="text-lightFont flex flex-col">
             <label for="trailer_url" class="form-label m-0">Trailer URL</label>
