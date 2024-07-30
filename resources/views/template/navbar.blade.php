@@ -103,13 +103,13 @@
       <div class="link flex gap-[10px]">
         <a target="_blank" class="saturate-0 hover:saturate-100" href="https://www.instagram.com/jmaverick_/">
           <div class="instagram flex flex-col items-center gap-[2px] relative">
-            <img class="w-[30px]" src="{{ Storage::url('./instagram_logo.webp') }}" alt="">
+            <img class="w-[30px]" src="{{ asset('image/instagram_logo.webp') }}" alt="">
             <p class="tag bg-grayDark absolute text-[10px] bottom-full p-[5px] rounded-md hidden">@jmaverick_</p>
           </div>
         </a>
         <a target="_blank" class="saturate-0 hover:saturate-100" href="https://www.instagram.com/hendrazhuoh/">
           <div class="instagram flex flex-col items-center gap-[2px] relative">
-            <img class="w-[30px]" src="{{ Storage::url('./instagram_logo.webp') }}" alt="">
+            <img class="w-[30px]" src="{{ asset('image/instagram_logo.webp') }}" alt="">
             <p class="tag bg-grayDark absolute text-[10px] bottom-full p-[5px] rounded-md hidden">@hendrazhuoh</p>
           </div>
         </a>
