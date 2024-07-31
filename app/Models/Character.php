@@ -8,22 +8,22 @@ use Illuminate\Database\Eloquent\Model;
 class Character extends Model
 {
 
-  protected $fillable = [
-    'character_name',
-    'character_image',
-    'anime_id',
-    'voice_actor_id',
-  ];
+    protected $fillable = [
+        'character_name',
+        'character_image',
+        'anime_id',
+        'voice_actor_id',
+    ];
 
-  public function animes()
-  {
-    return $this->belongsTo(Anime::class, 'anime_characters');
-  }
+    public function anime()
+    {
+        return $this->belongsTo(Anime::class);
+    }
 
-  public function voiceActor()
-  {
-    return $this->belongsTo(VoiceActor::class);
-  }
+    public function voiceActor()
+    {
+        return $this->belongsTo(VoiceActor::class);
+    }
 
-  use HasFactory;
+    use HasFactory;
 }
