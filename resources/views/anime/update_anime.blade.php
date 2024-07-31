@@ -28,12 +28,12 @@
           <div class="text-lightFont flex flex-col">
             <label for="anime_name" class="form-label m-0">Anime Name</label>
             <input class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm" type="text" class="form-control"
-              id="anime_name" name="anime_name" value="{{ $anime->anime_name }}">
+              id="anime_name" name="anime_name" value="{{ old('anime_name') ?? $anime->anime_name }}">
           </div>
           <div class="text-lightFont flex flex-col">
             <label for="views" class="form-label m-0">Views</label>
             <input class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm" type="number" class="form-control"
-              id="views" name="views" value="{{ $anime->views }}">
+              id="views" name="views" value="{{ old('views') ?? $anime->views }}">
           </div>
           <div class="text-lightFont flex flex-col">
             <label for="synopsis">Synopsis</label>
@@ -42,14 +42,15 @@
           <div class="text-lightFont flex flex-col">
             <label for="total_episodes" class="form-label m-0">Total Episodes</label>
             <input class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm" type="number" class="form-control"
-              id="total_episodes" name="total_episodes" value="{{ $anime->total_episodes }}">
+              id="total_episodes" name="total_episodes" value="{{ old('total_episodes') ?? $anime->total_episodes }}">
           </div>
           <div class="text-lightFont flex flex-col">
             <label for="studio_id" class="form-label m-0">Studio</label>
             <select id="studio_id" name="studio_id" class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm">
               <option value="" disabled>Select a Studio</option>
               @foreach ($studios as $studio)
-                <option value="{{ $studio->id }}" {{ $anime->studio_id == $studio->id ? 'selected' : '' }}>
+                <option value="{{ $studio->id }}"
+                  {{ (old('studio_id') ?? $anime->studio_id) == $studio->id ? 'selected' : '' }}>
                   {{ $studio->studio_name }}
                 </option>
               @endforeach
@@ -60,7 +61,8 @@
             <select id="season_id" name="season_id" class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm">
               <option value="" disabled>Select a Season</option>
               @foreach ($seasons as $season)
-                <option value="{{ $season->id }}" {{ $anime->season_id == $season->id ? 'selected' : '' }}>
+                <option value="{{ $season->id }}"
+                  {{ (old('season_id') ?? $anime->season_id) == $season->id ? 'selected' : '' }}>
                   {{ $season->season_name }}
                 </option>
               @endforeach
@@ -71,23 +73,25 @@
           <div class="text-lightFont flex flex-col">
             <label for="release_date" class="form-label m-0">Release Date</label>
             <input class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm" type="date" class="form-control"
-              id="release_date" name="release_date" value="{{ $anime->release_date }}">
+              id="release_date" name="release_date" value="{{ old('release_date') ?? $anime->release_date }}">
           </div>
           <div class="text-lightFont flex flex-col">
             <label for="mal_score" class="form-label m-0">MAL Score</label>
             <input class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm" type="number" class="form-control"
-              id="mal_score" step="0.01" name="mal_score" value="{{ $anime->mal_score }}">
+              id="mal_score" step="0.01" name="mal_score" value="{{ old('mal_score') ?? $anime->mal_score }}">
           </div>
           <div class="text-lightFont flex flex-col">
             <label for="trailer_url" class="form-label m-0">Trailer URL</label>
             <input class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm" type="text" class="form-control"
-              id="trailer_url" name="trailer_url" value="{{ 'https://www.youtube.com/watch?v=' . $anime->trailer_url }}">
+              id="trailer_url" name="trailer_url"
+              value="{{ old('trailer_url') ?? 'https://www.youtube.com/watch?v=' . $anime->trailer_url }}">
           </div>
           <div class="text-lightFont flex flex-col">
             <label for="anime_image">Image</label>
             <input class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm" type="file" class="form-control"
               id="anime_image" name="anime_image" onchange="previewImage(event)">
-            <img class="w-[130px] border-[1px] border-border mt-[8px]" src={{ Storage::url($anime->image_url) }}
+            <img class="w-[130px] border-[1px] border-border mt-[8px]"
+              src="{{ old('anime_image') ? Storage::url(old('anime_image')) : Storage::url($anime->image_url) }}"
               id="image-preview">
           </div>
         </div>
@@ -100,7 +104,8 @@
             @foreach ($genres as $genre)
               <div class="mr-[6px] gap-1 flex items-center">
                 <input type="checkbox" id="genre_{{ $genre->id }}" name="genres[]" value="{{ $genre->id }}"
-                  class="form-checkbox h-5 w-5 text-white" {{ $anime->genres->contains($genre->id) ? 'checked' : '' }}>
+                  class="form-checkbox h-5 w-5 text-white"
+                  {{ (old('genres') && in_array($genre->id, old('genres'))) || $anime->genres->contains($genre->id) ? 'checked' : '' }}>
                 <label for="genre_{{ $genre->id }}" class="text-white">{{ $genre->genre_name }}</label>
               </div>
             @endforeach
@@ -112,7 +117,7 @@
         <label class="m-0" for="character">Characters</label>
         <div class="outer-container bg-grayDark p-[15px] rounded-sm flex flex-col gap-[10px]">
           <div id="characters-container" class="flex flex-col gap-[10px]">
-            @foreach ($anime->characters as $index => $character)
+            @foreach (old('characters', $anime->characters) as $index => $character)
               <div class="character-entry" id="character-entry-{{ $index }}">
                 <div class="flex flex-row gap-[20px]">
                   <input type="hidden" class="text-black" name="characters[{{ $index }}][id]"
@@ -122,14 +127,14 @@
                     <input type="text" id="character_image_{{ $index }}"
                       name="characters[{{ $index }}][character_image]"
                       class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm w-full"
-                      value="{{ $character['character_image'] ?? '' }}">
+                      value="{{ old('characters.' . $index . '.character_image') ?? ($character['character_image'] ?? '') }}">
                   </div>
                   <div class="flex-1">
                     <label for="character_name_{{ $index }}" class="form-label m-0">Character Name</label>
                     <input type="text" id="character_name_{{ $index }}"
                       name="characters[{{ $index }}][character_name]"
                       class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm w-full"
-                      value="{{ $character['character_name'] ?? '' }}">
+                      value="{{ old('characters.' . $index . '.character_name') ?? ($character['character_name'] ?? '') }}">
                   </div>
                   <div class="flex-1">
                     <label class="form-label m-0">Voice Actors</label>
@@ -138,11 +143,10 @@
                         name="characters[{{ $index }}][voice_actor]"
                         class="bg-grayLight text-white py-[5px] px-[10px] rounded-sm w-full">
                         <option value="" disabled {{ isset($character['voice_actor']) ? '' : 'selected' }}>Select
-                          a
-                          Voice Actor</option>
+                          a Voice Actor</option>
                         @foreach ($voice_actors as $voiceActor)
                           <option value="{{ $voiceActor->id }}"
-                            {{ isset($character['voice_actor_id']) && $character['voice_actor_id'] == $voiceActor->id ? 'selected' : '' }}>
+                            {{ (old('characters.' . $index . '.voice_actor') ?? ($character['voice_actor_id'] ?? '')) == $voiceActor->id ? 'selected' : '' }}>
                             {{ $voiceActor->voice_actor_name }}
                           </option>
                         @endforeach
